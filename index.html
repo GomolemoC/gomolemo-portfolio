@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gomolemo Chenepe | Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #f6f8fb;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #111827, #2563eb);
+      color: white;
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 750px;
+      margin: 0 auto 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: white;
+      color: #2563eb;
+      padding: 12px 22px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 5px;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+    }
+
+    nav {
+      background: white;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #1f2937;
+      font-weight: bold;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 55px 20px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #111827;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    .about {
+      background: white;
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 18px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: #2563eb;
+      margin-bottom: 10px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #e0ecff;
+      color: #1d4ed8;
+      padding: 6px 10px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      margin: 5px 5px 0 0;
+      font-weight: bold;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+
+    .contact {
+      text-align: center;
+      background: #111827;
+      color: white;
+      border-radius: 18px;
+      padding: 35px;
+    }
+
+    .contact a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.1rem;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Gomolemo Chenepe</h1>
+    <p>BSc Biological Sciences Student | Python, Java & MySQL | Interested in Data, Technology, Operations and Innovation</p>
+    <a href="#projects" class="btn">View Projects</a>
+    <a href="#contact" class="btn">Contact Me</a>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about">
+      <p>
+        I am a motivated BSc Biological Sciences student at the University of Pretoria with a strong interest in combining science, technology and problem-solving. I have proficiency in Python, Java and MySQL and Microsoft 365.
+      </p>
+      <br />
+      <p>
+        My academic background has helped me develop strong analytical thinking, research skills and attention to detail. I am also experienced in tutoring through the University of Pretoria, where I strengthened my communication, leadership and mentorship abilities.
+      </p>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Introduction to Cloud Computing</h3>
+        <p><strong>Codecademy</strong></p>
+        <p>Completed foundational training in cloud computing concepts, cloud services and modern computing infrastructure.</p>
+        <span class="tag">Cloud Computing</span>
+        <span class="tag">Technology</span>
+        <span class="tag">Infrastructure</span>
+      </div>
+
+      <div class="card">
+        <h3>Introduction to Cybersecurity</h3>
+        <p><strong>Codecademy</strong></p>
+        <p>Completed introductory cybersecurity training focused on Cyber attacks, Social Engineering,Threat Actors, Third Party Risks and Intelligence Sources.</p>
+        <span class="tag">Cybersecurity</span>
+        <span class="tag">Security</span>
+        <span class="tag">Technology</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Python</h3>
+        <p>Comfortable with programming fundamentals, data handling, problem-solving and automation-style tasks.</p>
+        <span class="tag">Python</span>
+        <span class="tag">Data Analysis</span>
+        <span class="tag">Automation</span>
+      </div>
+
+      <div class="card">
+        <h3>Java</h3>
+        <p>Experience with object-oriented programming concepts, logic building and structured application development.</p>
+        <span class="tag">Java</span>
+        <span class="tag">OOP</span>
+        <span class="tag">Problem Solving</span>
+      </div>
+
+      <div class="card">
+        <h3>SQL & MySQL</h3>
+        <p>Able to work with databases, write SQL queries, organise data and retrieve useful information from structured datasets.</p>
+        <span class="tag">SQL</span>
+        <span class="tag">MySQL</span>
+        <span class="tag">Databases</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Featured Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Healthcare Data Analysis System</h3>
+        <p>A Python-based analytical project designed to process and interpret patient and healthcare datasets to identify trends, risks and operational insights.</p>
+        <ul>
+          <li>Analysed structured datasets using Python</li>
+          <li>Generated reports and trend summaries</li>
+          <li>Focused on data-driven decision making in healthcare environments</li>
+          <li>Applied analytical thinking and data interpretation skills</li>
+        </ul>
+        <span class="tag">Python</span>
+        <span class="tag">Data Analysis</span>
+        <span class="tag">Healthcare</span>
+      </div>
+
+      <div class="card">
+        <h3>University Academic Management Database</h3>
+        <p>Designed a relational MySQL database system to manage student records, academic performance, tutor allocations and course information within a university environment.</p>
+        <ul>
+          <li>Created relational database structures</li>
+          <li>Implemented SQL queries for reporting and data retrieval</li>
+          <li>Focused on efficient data organisation and administration</li>
+          <li>Simulated real-world academic administration workflows</li>
+        </ul>
+        <span class="tag">MySQL</span>
+        <span class="tag">SQL</span>
+        <span class="tag">Database Design</span>
+      </div>
+
+      <div class="card">
+        <h3>Cybersecurity Threat Monitoring Concept</h3>
+        <p>Developed a conceptual Java-based monitoring system focused on identifying suspicious login attempts, tracking activity patterns a
+
+  <section id="experience">
+    <h2>Experience & Education</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Tutor</h3>
+        <p><strong>University of Cape Town</strong></p>
+        <p>Provided academic support to students by explaining complex concepts, assisting with problem-solving and supporting student learning in a professional environment.</p>
+        <ul>
+          <li>Communication and mentorship</li>
+          <li>Leadership and responsibility</li>
+          <li>Time management and professionalism</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>BSc Biological Sciences</h3>
+        <p><strong>University of Pretoria</strong></p>
+        <p>Current student developing strong scientific, analytical and research skills through biological sciences coursework.</p>
+        <span class="tag">Science</span>
+        <span class="tag">Research</span>
+        <span class="tag">Analysis</span>
+      </div>
+
+     
+        <span class="tag">Programming</span>
+        <span class="tag">Databases</span>
+        <span class="tag">Technology</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact">
+      <p>Email: <a href="mailto:gchenepe@gmail.com">gchenepe@gmail.com</a></p>
+      <p>Location: Pretoria / Johannesburg, South Africa</p>
+      <p>LinkedIn: Add your LinkedIn profile link here</p>
+      <p>GitHub: Add your GitHub profile link here</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Gomolemo Chenepe. All rights reserved.</p>
+  </footer>
+</body>
+</html>
