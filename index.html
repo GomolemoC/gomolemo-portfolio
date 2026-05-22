@@ -12,105 +12,177 @@
       font-family: Arial, Helvetica, sans-serif;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      background: #f6f8fb;
+      background: #f8fafc;
       color: #1f2937;
       line-height: 1.6;
     }
 
     header {
-      background: linear-gradient(135deg, #111827, #2563eb);
+      min-height: 90vh;
+      background:
+        linear-gradient(rgba(15, 23, 42, 0.78), rgba(30, 64, 175, 0.82)),
+        url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80");
+      background-size: cover;
+      background-position: center;
       color: white;
-      padding: 70px 20px;
+      padding: 90px 20px;
       text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .profile-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid white;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+      margin-bottom: 25px;
+      background: #dbeafe;
     }
 
     header h1 {
-      font-size: 2.8rem;
-      margin-bottom: 10px;
+      font-size: 3.4rem;
+      margin-bottom: 12px;
+      letter-spacing: 1px;
     }
 
     header p {
-      font-size: 1.2rem;
-      max-width: 750px;
-      margin: 0 auto 25px;
+      font-size: 1.25rem;
+      max-width: 780px;
+      margin: 0 auto 28px;
+      color: #e0f2fe;
+    }
+
+    .highlight {
+      color: #facc15;
+      font-weight: bold;
     }
 
     .btn {
       display: inline-block;
-      background: white;
-      color: #2563eb;
-      padding: 12px 22px;
+      background: #facc15;
+      color: #111827;
+      padding: 13px 24px;
       border-radius: 30px;
       text-decoration: none;
       font-weight: bold;
-      margin: 5px;
+      margin: 6px;
       transition: 0.3s ease;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+    }
+
+    .btn.secondary {
+      background: white;
+      color: #2563eb;
     }
 
     .btn:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.28);
     }
 
     nav {
       background: white;
       padding: 15px;
       text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
       position: sticky;
       top: 0;
       z-index: 10;
     }
 
     nav a {
-      margin: 0 15px;
+      margin: 0 14px;
       text-decoration: none;
       color: #1f2937;
       font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #2563eb;
     }
 
     section {
-      max-width: 1100px;
+      max-width: 1120px;
       margin: auto;
-      padding: 55px 20px;
+      padding: 60px 20px;
     }
 
     h2 {
-      font-size: 2rem;
+      font-size: 2.1rem;
       color: #111827;
-      margin-bottom: 25px;
+      margin-bottom: 28px;
       text-align: center;
+    }
+
+    h2::after {
+      content: "";
+      display: block;
+      width: 70px;
+      height: 4px;
+      background: #2563eb;
+      margin: 10px auto 0;
+      border-radius: 10px;
     }
 
     .about {
       background: white;
-      padding: 30px;
-      border-radius: 18px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      padding: 32px;
+      border-radius: 22px;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+      border-left: 6px solid #2563eb;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 22px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
     }
 
     .card {
       background: white;
-      padding: 25px;
-      border-radius: 18px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      padding: 26px;
+      border-radius: 22px;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
       transition: 0.3s ease;
+      border-top: 5px solid #2563eb;
     }
 
     .card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-6px);
+      box-shadow: 0 16px 35px rgba(15, 23, 42, 0.13);
+    }
+
+    .project-card:nth-child(1) { border-top-color: #16a34a; }
+    .project-card:nth-child(2) { border-top-color: #7c3aed; }
+    .project-card:nth-child(3) { border-top-color: #dc2626; }
+    .project-card:nth-child(4) { border-top-color: #0891b2; }
+
+    .card-image {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 16px;
+      margin-bottom: 16px;
     }
 
     .card h3 {
       color: #2563eb;
       margin-bottom: 10px;
+      font-size: 1.25rem;
     }
 
     .tag {
@@ -120,9 +192,14 @@
       padding: 6px 10px;
       border-radius: 20px;
       font-size: 0.85rem;
-      margin: 5px 5px 0 0;
+      margin: 7px 5px 0 0;
       font-weight: bold;
     }
+
+    .tag.green { background: #dcfce7; color: #166534; }
+    .tag.purple { background: #ede9fe; color: #5b21b6; }
+    .tag.red { background: #fee2e2; color: #991b1b; }
+    .tag.yellow { background: #fef3c7; color: #92400e; }
 
     ul {
       padding-left: 20px;
@@ -131,28 +208,34 @@
 
     .contact {
       text-align: center;
-      background: #111827;
+      background: linear-gradient(135deg, #111827, #1d4ed8);
       color: white;
-      border-radius: 18px;
-      padding: 35px;
+      border-radius: 22px;
+      padding: 40px;
+      box-shadow: 0 12px 30px rgba(15,23,42,0.22);
     }
 
     .contact a {
-      color: #93c5fd;
+      color: #facc15;
       text-decoration: none;
       font-weight: bold;
     }
 
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 24px;
       color: #6b7280;
       font-size: 0.9rem;
+      background: white;
     }
 
     @media (max-width: 600px) {
       header h1 {
-        font-size: 2.1rem;
+        font-size: 2.3rem;
+      }
+
+      header p {
+        font-size: 1.05rem;
       }
 
       nav a {
@@ -164,10 +247,13 @@
 </head>
 <body>
   <header>
-    <h1>Gomolemo Chenepe</h1>
-    <p>BSc Biological Sciences Student | Python, Java & MySQL | Interested in Data, Technology, Operations and Innovation</p>
-    <a href="#projects" class="btn">View Projects</a>
-    <a href="#contact" class="btn">Contact Me</a>
+    <div class="hero-content">
+      <img class="profile-image" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80" alt="Professional profile placeholder" />
+      <h1>Gomolemo Chenepe</h1>
+      <p><span class="highlight">BSc Biological Sciences Student</span> | Python, Java & MySQL | Interested in Data, Technology, Operations and Innovation</p>
+      <a href="#projects" class="btn">View Projects</a>
+      <a href="#contact" class="btn secondary">Contact Me</a>
+    </div>
   </header>
 
   <nav>
@@ -182,11 +268,11 @@
     <h2>About Me</h2>
     <div class="about">
       <p>
-        I am a motivated BSc Biological Sciences student at the University of Pretoria with a strong interest in combining science, technology and problem-solving. I have proficiency in Python, Java and MySQL and Microsoft 365.
+        I am a motivated BSc Biological Sciences student at the University of Pretoria with a strong interest in combining science, technology and problem-solving. I have proficiency in Python, Java and MySQL, supported by previous Computer Science studies at Central University of Technology.
       </p>
       <br />
       <p>
-        My academic background has helped me develop strong analytical thinking, research skills and attention to detail. I am also experienced in tutoring through the University of Pretoria, where I strengthened my communication, leadership and mentorship abilities.
+        My academic background has helped me develop strong analytical thinking, research skills and attention to detail. I am also experienced in tutoring through the University of Cape Town, where I strengthened my communication, leadership and mentorship abilities.
       </p>
     </div>
   </section>
@@ -206,7 +292,7 @@
       <div class="card">
         <h3>Introduction to Cybersecurity</h3>
         <p><strong>Codecademy</strong></p>
-        <p>Completed introductory cybersecurity training focused on Cyber attacks, Social Engineering,Threat Actors, Third Party Risks and Intelligence Sources.</p>
+        <p>Completed introductory cybersecurity training focused on online security principles, threat awareness and digital protection basics.</p>
         <span class="tag">Cybersecurity</span>
         <span class="tag">Security</span>
         <span class="tag">Technology</span>
@@ -246,7 +332,8 @@
   <section id="projects">
     <h2>Featured Projects</h2>
     <div class="grid">
-      <div class="card">
+      <div class="card project-card">
+        <img class="card-image" src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=80" alt="Healthcare data analysis" />
         <h3>Healthcare Data Analysis System</h3>
         <p>A Python-based analytical project designed to process and interpret patient and healthcare datasets to identify trends, risks and operational insights.</p>
         <ul>
@@ -260,7 +347,8 @@
         <span class="tag">Healthcare</span>
       </div>
 
-      <div class="card">
+      <div class="card project-card">
+        <img class="card-image" src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=900&q=80" alt="University academic database" />
         <h3>University Academic Management Database</h3>
         <p>Designed a relational MySQL database system to manage student records, academic performance, tutor allocations and course information within a university environment.</p>
         <ul>
@@ -274,16 +362,44 @@
         <span class="tag">Database Design</span>
       </div>
 
-      <div class="card">
+      <div class="card project-card">
+        <img class="card-image" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=900&q=80" alt="Cybersecurity monitoring" />
         <h3>Cybersecurity Threat Monitoring Concept</h3>
-        <p>Developed a conceptual Java-based monitoring system focused on identifying suspicious login attempts, tracking activity patterns a
+        <p>Developed a conceptual Java-based monitoring system focused on identifying suspicious login attempts, tracking activity patterns and improving system security awareness.</p>
+        <ul>
+          <li>Applied object-oriented programming principles</li>
+          <li>Simulated authentication and activity monitoring workflows</li>
+          <li>Focused on cybersecurity awareness and risk reduction</li>
+          <li>Strengthened software design and logic development skills</li>
+        </ul>
+        <span class="tag">Java</span>
+        <span class="tag">Cybersecurity</span>
+        <span class="tag">OOP</span>
+      </div>
+
+      <div class="card project-card">
+        <img class="card-image" src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=900&q=80" alt="Scientific research and data interpretation" />
+        <h3>Research & Scientific Data Interpretation</h3>
+        <p>Applied scientific and analytical methods to interpret biological datasets, evaluate research findings and communicate evidence-based conclusions through structured reporting.</p>
+        <ul>
+          <li>Worked with biological and scientific datasets</li>
+          <li>Performed research analysis and interpretation</li>
+          <li>Developed critical thinking and reporting abilities</li>
+          <li>Integrated scientific and technical problem-solving approaches</li>
+        </ul>
+        <span class="tag">Research</span>
+        <span class="tag">Analysis</span>
+        <span class="tag">Science</span>
+      </div>
+    </div>
+  </section>
 
   <section id="experience">
     <h2>Experience & Education</h2>
     <div class="grid">
       <div class="card">
         <h3>Tutor</h3>
-        <p><strong>University of Pretoria </strong></p>
+        <p><strong>University of Pretoria</strong></p>
         <p>Provided academic support to students by explaining complex concepts, assisting with problem-solving and supporting student learning in a professional environment.</p>
         <ul>
           <li>Communication and mentorship</li>
@@ -301,7 +417,10 @@
         <span class="tag">Analysis</span>
       </div>
 
-     
+      <div class="card">
+        <h3>Computer Science Studies</h3>
+        <p><strong>Central University of Technology</strong></p>
+        <p>Completed coursework exposure in programming, databases and computational problem-solving.</p>
         <span class="tag">Programming</span>
         <span class="tag">Databases</span>
         <span class="tag">Technology</span>
