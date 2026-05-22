@@ -17,420 +17,575 @@
     }
 
     body {
-      background: #f8fafc;
-      color: #1f2937;
+      background: #050816;
+      color: #f8fafc;
       line-height: 1.6;
     }
 
-    header {
-      min-height: 90vh;
-      background:
-        linear-gradient(rgba(15, 23, 42, 0.78), rgba(30, 64, 175, 0.82)),
-        url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80");
-      background-size: cover;
-      background-position: center;
-      color: white;
-      padding: 90px 20px;
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .hero-content {
-      max-width: 900px;
-    }
-
-    .profile-image {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 5px solid white;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.35);
-      margin-bottom: 25px;
-      background: #dbeafe;
-    }
-
-    header h1 {
-      font-size: 3.4rem;
-      margin-bottom: 12px;
-      letter-spacing: 1px;
-    }
-
-    header p {
-      font-size: 1.25rem;
-      max-width: 780px;
-      margin: 0 auto 28px;
-      color: #e0f2fe;
-    }
-
-    .highlight {
-      color: #facc15;
-      font-weight: bold;
-    }
-
-    .btn {
-      display: inline-block;
-      background: #facc15;
-      color: #111827;
-      padding: 13px 24px;
-      border-radius: 30px;
+    a {
       text-decoration: none;
-      font-weight: bold;
-      margin: 6px;
-      transition: 0.3s ease;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+      color: inherit;
     }
 
-    .btn.secondary {
-      background: white;
-      color: #2563eb;
-    }
-
-    .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 25px rgba(0,0,0,0.28);
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
     }
 
     nav {
-      background: white;
-      padding: 15px;
-      text-align: center;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 20;
+      background: rgba(5, 8, 22, 0.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 
-    nav a {
-      margin: 0 14px;
-      text-decoration: none;
-      color: #1f2937;
-      font-weight: bold;
+    .nav-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+    }
+
+    .logo {
+      font-size: 1.25rem;
+      font-weight: 800;
+    }
+
+    .logo span {
+      color: #c084fc;
+    }
+
+    .nav-links a {
+      margin-left: 28px;
+      font-size: 0.95rem;
+      color: #e5e7eb;
       transition: 0.3s ease;
     }
 
-    nav a:hover {
-      color: #2563eb;
+    .nav-links a:hover {
+      color: #c084fc;
+    }
+
+    .hero {
+      min-height: 88vh;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+      align-items: center;
+      padding: 70px 0 35px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 460px;
+      height: 460px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(168, 85, 247, 0.45), transparent 65%);
+      right: 60px;
+      top: 90px;
+      filter: blur(8px);
+      z-index: -1;
+    }
+
+    .pill {
+      display: inline-block;
+      background: linear-gradient(135deg, #7c3aed, #ec4899);
+      color: white;
+      padding: 8px 18px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 22px;
+      box-shadow: 0 0 24px rgba(168, 85, 247, 0.35);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.6rem, 6vw, 5rem);
+      line-height: 1.05;
+      margin-bottom: 18px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #8b5cf6, #ec4899);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero h2 {
+      font-size: 1.35rem;
+      color: #f8fafc;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      color: #cbd5e1;
+      max-width: 610px;
+      font-size: 1.05rem;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .btn {
+      padding: 14px 24px;
+      border-radius: 10px;
+      font-weight: 800;
+      transition: 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #7c3aed, #ec4899);
+      color: white;
+      box-shadow: 0 10px 30px rgba(168, 85, 247, 0.28);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      color: white;
+    }
+
+    .btn:hover {
+      transform: translateY(-4px);
+    }
+
+    .socials {
+      display: flex;
+      gap: 18px;
+      color: #e5e7eb;
+      font-size: 1.4rem;
+    }
+
+    .socials a {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      transition: 0.3s ease;
+    }
+
+    .socials a:hover {
+      background: #7c3aed;
+      transform: translateY(-4px);
+    }
+
+    .hero-image-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: end;
+      min-height: 520px;
+      position: relative;
+    }
+
+    .hero-image-wrap::before {
+      content: "";
+      position: absolute;
+      width: 360px;
+      height: 360px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #9333ea, #312e81 58%, transparent 70%);
+      box-shadow: 0 0 80px rgba(168, 85, 247, 0.5);
+      z-index: 0;
+    }
+
+    .profile-photo {
+      width: min(420px, 95%);
+      max-height: 560px;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 28px;
+      position: relative;
+      z-index: 1;
+      filter: drop-shadow(0 22px 35px rgba(0, 0, 0, 0.45));
+      border: 1px solid rgba(255, 255, 255, 0.12);
     }
 
     section {
-      max-width: 1120px;
-      margin: auto;
-      padding: 60px 20px;
+      padding: 58px 0;
     }
 
-    h2 {
-      font-size: 2.1rem;
-      color: #111827;
-      margin-bottom: 28px;
+    .section-card {
+      background: rgba(15, 23, 42, 0.82);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 24px;
+      padding: 30px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 26px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-title span {
+      color: #c084fc;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .about-text p {
+      color: #cbd5e1;
+      margin-bottom: 14px;
+    }
+
+    .mini-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .mini-card {
+      background: rgba(255, 255, 255, 0.045);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 18px;
+      padding: 20px;
+    }
+
+    .mini-card h3 {
+      color: #f8fafc;
+      margin-bottom: 6px;
+      font-size: 1rem;
+    }
+
+    .mini-card p {
+      color: #cbd5e1;
+      font-size: 0.95rem;
+    }
+
+    .icon {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: #a855f7;
+    }
+
+    .skills-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 18px;
+    }
+
+    .skill-card {
       text-align: center;
+      background: rgba(15, 23, 42, 0.82);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 22px 12px;
+      transition: 0.3s ease;
     }
 
-    h2::after {
-      content: "";
-      display: block;
-      width: 70px;
-      height: 4px;
-      background: #2563eb;
-      margin: 10px auto 0;
-      border-radius: 10px;
+    .skill-card:hover {
+      transform: translateY(-6px);
+      border-color: #a855f7;
     }
 
-    .about {
-      background: white;
-      padding: 32px;
-      border-radius: 22px;
-      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
-      border-left: 6px solid #2563eb;
+    .skill-emoji {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
     }
 
-    .grid {
+    .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
+      gap: 22px;
     }
 
-    .card {
-      background: white;
-      padding: 26px;
-      border-radius: 22px;
-      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
-      transition: 0.3s ease;
-      border-top: 5px solid #2563eb;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 16px 35px rgba(15, 23, 42, 0.13);
-    }
-
-    .project-card:nth-child(1) { border-top-color: #16a34a; }
-    .project-card:nth-child(2) { border-top-color: #7c3aed; }
-    .project-card:nth-child(3) { border-top-color: #dc2626; }
-    .project-card:nth-child(4) { border-top-color: #0891b2; }
-
-    .card-image {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 16px;
-      margin-bottom: 16px;
-    }
-
-    .card h3 {
-      color: #2563eb;
-      margin-bottom: 10px;
-      font-size: 1.25rem;
-    }
-
-    .tag {
-      display: inline-block;
-      background: #e0ecff;
-      color: #1d4ed8;
-      padding: 6px 10px;
+    .project-card {
+      background: rgba(15, 23, 42, 0.86);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 20px;
-      font-size: 0.85rem;
-      margin: 7px 5px 0 0;
-      font-weight: bold;
+      overflow: hidden;
+      transition: 0.3s ease;
     }
 
-    .tag.green { background: #dcfce7; color: #166534; }
-    .tag.purple { background: #ede9fe; color: #5b21b6; }
-    .tag.red { background: #fee2e2; color: #991b1b; }
-    .tag.yellow { background: #fef3c7; color: #92400e; }
-
-    ul {
-      padding-left: 20px;
-      margin-top: 10px;
+    .project-card:hover {
+      transform: translateY(-7px);
+      border-color: #a855f7;
+      box-shadow: 0 20px 45px rgba(168, 85, 247, 0.16);
     }
 
-    .contact {
+    .project-card img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+    }
+
+    .project-content {
+      padding: 20px;
+    }
+
+    .project-content h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .project-content p {
+      color: #cbd5e1;
+      margin-bottom: 15px;
+    }
+
+    .project-link {
+      color: #c084fc;
+      font-weight: 800;
+    }
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .cert-card {
+      background: rgba(15, 23, 42, 0.86);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-left: 5px solid #a855f7;
+      border-radius: 18px;
+      padding: 22px;
+    }
+
+    .cert-card h3 {
+      margin-bottom: 8px;
+    }
+
+    .cert-card p {
+      color: #cbd5e1;
+    }
+
+    .contact-card {
       text-align: center;
-      background: linear-gradient(135deg, #111827, #1d4ed8);
-      color: white;
-      border-radius: 22px;
-      padding: 40px;
-      box-shadow: 0 12px 30px rgba(15,23,42,0.22);
+      background: linear-gradient(135deg, rgba(124, 58, 237, 0.3), rgba(236, 72, 153, 0.22));
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 24px;
+      padding: 42px 24px;
     }
 
-    .contact a {
-      color: #facc15;
-      text-decoration: none;
-      font-weight: bold;
+    .contact-card h2 {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+
+    .contact-card p {
+      color: #e5e7eb;
+      margin-bottom: 8px;
     }
 
     footer {
+      padding: 28px 0;
       text-align: center;
-      padding: 24px;
-      color: #6b7280;
-      font-size: 0.9rem;
-      background: white;
+      color: #94a3b8;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2.3rem;
+    @media (max-width: 850px) {
+      .hero, .about-grid {
+        grid-template-columns: 1fr;
       }
 
-      header p {
-        font-size: 1.05rem;
+      .hero {
+        text-align: center;
+        padding-top: 45px;
       }
 
-      nav a {
-        display: inline-block;
-        margin: 8px;
+      .hero p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-buttons, .socials {
+        justify-content: center;
+      }
+
+      .hero-image-wrap {
+        min-height: auto;
+      }
+
+      .nav-content {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .nav-links a {
+        margin: 0 8px;
+      }
+
+      .mini-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="hero-content">
-      <img class="profile-image" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80" alt="Professional profile placeholder" />
-      <h1>Gomolemo Chenepe</h1>
-      <p><span class="highlight">BSc Biological Sciences Student</span> | Python, Java & MySQL | Interested in Data, Technology, Operations and Innovation</p>
-      <a href="#projects" class="btn">View Projects</a>
-      <a href="#contact" class="btn secondary">Contact Me</a>
-    </div>
-  </header>
-
   <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#experience">Experience</a>
-    <a href="#contact">Contact</a>
+    <div class="container nav-content">
+      <a href="#home" class="logo">Gomolemo <span>Chenepe</span></a>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
   </nav>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <div class="about">
-      <p>
-        I am a motivated BSc Biological Sciences student at the University of Pretoria with a strong interest in combining science, technology and problem-solving. I have proficiency in Python, Java and MySQL, supported by previous Computer Science studies at Central University of Technology.
-      </p>
-      <br />
-      <p>
-        My academic background has helped me develop strong analytical thinking, research skills and attention to detail. I am also experienced in tutoring through the University of Cape Town, where I strengthened my communication, leadership and mentorship abilities.
-      </p>
-    </div>
-  </section>
-
-  <section id="certifications">
-    <h2>Certifications</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Introduction to Cloud Computing</h3>
-        <p><strong>Codecademy</strong></p>
-        <p>Completed foundational training in cloud computing concepts, cloud services and modern computing infrastructure.</p>
-        <span class="tag">Cloud Computing</span>
-        <span class="tag">Technology</span>
-        <span class="tag">Infrastructure</span>
+  <main class="container">
+    <section id="home" class="hero">
+      <div>
+        <div class="pill">STEM Student • Data & Technology</div>
+        <h1>Hi, I'm <br><span class="gradient-text">Gomolemo Chenepe</span></h1>
+        <h2>Turning science, data and code into meaningful solutions.</h2>
+        <p>
+          I am a BSc Biological Sciences student with proficiency in Python, Java and MySQL. I am interested in data analysis, technology, operations, cybersecurity and cloud computing.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">View My Projects →</a>
+          <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+        <div class="socials">
+          <a href="mailto:gchenepe@gmail.com" title="Email">✉️</a>
+          <a href="#" title="GitHub">💻</a>
+          <a href="#" title="LinkedIn">🔗</a>
+        </div>
       </div>
 
-      <div class="card">
-        <h3>Introduction to Cybersecurity</h3>
-        <p><strong>Codecademy</strong></p>
-        <p>Completed introductory cybersecurity training focused on online security principles, threat awareness and digital protection basics.</p>
-        <span class="tag">Cybersecurity</span>
-        <span class="tag">Security</span>
-        <span class="tag">Technology</span>
+      <div class="hero-image-wrap">
+        <img class="profile-photo" src="profile.jpg" alt="Gomolemo Chenepe" />
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="skills">
-    <h2>Technical Skills</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Python</h3>
-        <p>Comfortable with programming fundamentals, data handling, problem-solving and automation-style tasks.</p>
-        <span class="tag">Python</span>
-        <span class="tag">Data Analysis</span>
-        <span class="tag">Automation</span>
+    <section id="about">
+      <div class="section-card about-grid">
+        <div class="about-text">
+          <h2 class="section-title"><span>✦</span> About Me</h2>
+          <p>
+            I am a motivated and detail-oriented BSc Biological Sciences student at the University of Pretoria with a strong foundation in scientific thinking, research, analysis and technology.
+          </p>
+          <p>
+            My background combines biology, programming and tutoring experience, allowing me to approach problems with both analytical and people-focused thinking.
+          </p>
+          <p>
+            I am building real-world portfolio projects in Python, Java and MySQL to demonstrate my ability to solve practical problems and communicate insights clearly.
+          </p>
+          <a href="#projects" class="btn btn-outline">Learn More About My Work</a>
+        </div>
+
+        <div class="mini-grid">
+          <div class="mini-card">
+            <div class="icon">🎓</div>
+            <h3>Education</h3>
+            <p>BSc Biological Sciences, University of Pretoria</p>
+          </div>
+          <div class="mini-card">
+            <div class="icon">🎯</div>
+            <h3>Focus</h3>
+            <p>Data, Technology, Operations and Innovation</p>
+          </div>
+          <div class="mini-card">
+            <div class="icon">👩🏽‍🏫</div>
+            <h3>Experience</h3>
+            <p>Tutor at the University of Cape Town</p>
+          </div>
+          <div class="mini-card">
+            <div class="icon">🚀</div>
+            <h3>Goal</h3>
+            <p>To grow in technology and create useful solutions</p>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <h3>Java</h3>
-        <p>Experience with object-oriented programming concepts, logic building and structured application development.</p>
-        <span class="tag">Java</span>
-        <span class="tag">OOP</span>
-        <span class="tag">Problem Solving</span>
+    <section id="skills">
+      <h2 class="section-title"><span>✦</span> Skills</h2>
+      <div class="skills-row">
+        <div class="skill-card"><div class="skill-emoji">🐍</div><h3>Python</h3></div>
+        <div class="skill-card"><div class="skill-emoji">☕</div><h3>Java</h3></div>
+        <div class="skill-card"><div class="skill-emoji">🗄️</div><h3>SQL</h3></div>
+        <div class="skill-card"><div class="skill-emoji">🐬</div><h3>MySQL</h3></div>
+        <div class="skill-card"><div class="skill-emoji">📊</div><h3>Excel</h3></div>
+        <div class="skill-card"><div class="skill-emoji">☁️</div><h3>Cloud Basics</h3></div>
+        <div class="skill-card"><div class="skill-emoji">🔐</div><h3>Cybersecurity</h3></div>
       </div>
+    </section>
 
-      <div class="card">
-        <h3>SQL & MySQL</h3>
-        <p>Able to work with databases, write SQL queries, organise data and retrieve useful information from structured datasets.</p>
-        <span class="tag">SQL</span>
-        <span class="tag">MySQL</span>
-        <span class="tag">Databases</span>
+    <section id="projects">
+      <h2 class="section-title"><span>✦</span> Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=80" alt="Healthcare analytics project" />
+          <div class="project-content">
+            <h3>Healthcare Data Analysis System</h3>
+            <p>Analyses patient data to identify risk levels, health trends, waiting-time patterns and operational insights.</p>
+            <a href="#" class="project-link">View Project →</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=900&q=80" alt="Academic database project" />
+          <div class="project-content">
+            <h3>University Academic Management Database</h3>
+            <p>MySQL database concept for managing students, courses, tutor allocations and academic performance records.</p>
+            <a href="#" class="project-link">View Project →</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=900&q=80" alt="Cybersecurity project" />
+          <div class="project-content">
+            <h3>Cybersecurity Threat Monitoring Concept</h3>
+            <p>Java-based concept for identifying suspicious login attempts and improving security awareness.</p>
+            <a href="#" class="project-link">View Project →</a>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="projects">
-    <h2>Featured Projects</h2>
-    <div class="grid">
-      <div class="card project-card">
-        <img class="card-image" src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=80" alt="Healthcare data analysis" />
-        <h3>Healthcare Data Analysis System</h3>
-        <p>A Python-based analytical project designed to process and interpret patient and healthcare datasets to identify trends, risks and operational insights.</p>
-        <ul>
-          <li>Analysed structured datasets using Python</li>
-          <li>Generated reports and trend summaries</li>
-          <li>Focused on data-driven decision making in healthcare environments</li>
-          <li>Applied analytical thinking and data interpretation skills</li>
-        </ul>
-        <span class="tag">Python</span>
-        <span class="tag">Data Analysis</span>
-        <span class="tag">Healthcare</span>
+    <section id="certifications">
+      <h2 class="section-title"><span>✦</span> Certifications</h2>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <h3>Introduction to Cloud Computing</h3>
+          <p>Codecademy — foundational cloud concepts, cloud services and computing infrastructure.</p>
+        </div>
+        <div class="cert-card">
+          <h3>Introduction to Cybersecurity</h3>
+          <p>Codecademy — online security principles, threat awareness and digital protection basics.</p>
+        </div>
       </div>
+    </section>
 
-      <div class="card project-card">
-        <img class="card-image" src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=900&q=80" alt="University academic database" />
-        <h3>University Academic Management Database</h3>
-        <p>Designed a relational MySQL database system to manage student records, academic performance, tutor allocations and course information within a university environment.</p>
-        <ul>
-          <li>Created relational database structures</li>
-          <li>Implemented SQL queries for reporting and data retrieval</li>
-          <li>Focused on efficient data organisation and administration</li>
-          <li>Simulated real-world academic administration workflows</li>
-        </ul>
-        <span class="tag">MySQL</span>
-        <span class="tag">SQL</span>
-        <span class="tag">Database Design</span>
+    <section id="contact">
+      <div class="contact-card">
+        <h2>Let’s Connect</h2>
+        <p>Email: <a href="mailto:gchenepe@gmail.com">gchenepe@gmail.com</a></p>
+        <p>Location: Pretoria / Johannesburg, South Africa</p>
+        <p>GitHub: Add your GitHub link here • LinkedIn: Add your LinkedIn link here</p>
       </div>
-
-      <div class="card project-card">
-        <img class="card-image" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=900&q=80" alt="Cybersecurity monitoring" />
-        <h3>Cybersecurity Threat Monitoring Concept</h3>
-        <p>Developed a conceptual Java-based monitoring system focused on identifying suspicious login attempts, tracking activity patterns and improving system security awareness.</p>
-        <ul>
-          <li>Applied object-oriented programming principles</li>
-          <li>Simulated authentication and activity monitoring workflows</li>
-          <li>Focused on cybersecurity awareness and risk reduction</li>
-          <li>Strengthened software design and logic development skills</li>
-        </ul>
-        <span class="tag">Java</span>
-        <span class="tag">Cybersecurity</span>
-        <span class="tag">OOP</span>
-      </div>
-
-      <div class="card project-card">
-        <img class="card-image" src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=900&q=80" alt="Scientific research and data interpretation" />
-        <h3>Research & Scientific Data Interpretation</h3>
-        <p>Applied scientific and analytical methods to interpret biological datasets, evaluate research findings and communicate evidence-based conclusions through structured reporting.</p>
-        <ul>
-          <li>Worked with biological and scientific datasets</li>
-          <li>Performed research analysis and interpretation</li>
-          <li>Developed critical thinking and reporting abilities</li>
-          <li>Integrated scientific and technical problem-solving approaches</li>
-        </ul>
-        <span class="tag">Research</span>
-        <span class="tag">Analysis</span>
-        <span class="tag">Science</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="experience">
-    <h2>Experience & Education</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Tutor</h3>
-        <p><strong>University of Pretoria</strong></p>
-        <p>Provided academic support to students by explaining complex concepts, assisting with problem-solving and supporting student learning in a professional environment.</p>
-        <ul>
-          <li>Communication and mentorship</li>
-          <li>Leadership and responsibility</li>
-          <li>Time management and professionalism</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>BSc Biological Sciences</h3>
-        <p><strong>University of Pretoria</strong></p>
-        <p>Final yer student developing strong scientific, analytical and research skills through biological sciences coursework.</p>
-        <span class="tag">Science</span>
-        <span class="tag">Research</span>
-        <span class="tag">Analysis</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="contact">
-      <p>Email: <a href="mailto:gchenepe@gmail.com">gchenepe@gmail.com</a></p>
-      <p>Location: Pretoria / Johannesburg, South Africa</p>
-      <p>LinkedIn: Add your LinkedIn profile link here</p>
-      <p>GitHub: Add your GitHub profile link here</p>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <footer>
-    <p>© 2026 Gomolemo Chenepe. All rights reserved.</p>
+    <p>© 2026 Gomolemo Chenepe. Built with HTML & CSS.</p>
   </footer>
 </body>
 </html>
