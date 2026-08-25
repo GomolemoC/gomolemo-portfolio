@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gomolemo Chenepe | Aspiring Tech Professional</title>
+    <title>Gomolemo Chenepe | Tech Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* ============ RESET & BASE STYLES ============ */
         * {
             margin: 0;
             padding: 0;
@@ -22,7 +21,6 @@
             background: #0a0a1a;
             color: #f8fafc;
             line-height: 1.6;
-            overflow-x: hidden;
         }
 
         .container {
@@ -30,12 +28,7 @@
             margin: auto;
         }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        /* ============ NAVIGATION ============ */
+        /* Navigation */
         nav {
             position: sticky;
             top: 0;
@@ -44,12 +37,6 @@
             backdrop-filter: blur(16px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             padding: 1rem 0;
-            transition: all 0.3s ease;
-        }
-
-        nav.scrolled {
-            background: rgba(10, 10, 26, 0.98);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
         }
 
         .nav-content {
@@ -61,14 +48,12 @@
         .logo {
             font-size: 1.5rem;
             font-weight: 800;
-            color: #f8fafc;
         }
 
         .logo span {
             background: linear-gradient(135deg, #c084fc, #ec4899);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
 
         .nav-links {
@@ -78,24 +63,9 @@
 
         .nav-links a {
             color: #e5e7eb;
+            text-decoration: none;
             font-size: 0.95rem;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(135deg, #c084fc, #ec4899);
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
+            transition: 0.3s;
         }
 
         .nav-links a:hover {
@@ -106,17 +76,16 @@
             display: none;
             cursor: pointer;
             font-size: 1.5rem;
-            color: #f8fafc;
         }
 
-        /* ============ HERO SECTION ============ */
+        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
+            background: linear-gradient(135deg, #0a0a1a 0%, #1a1a3e 100%);
             position: relative;
             overflow: hidden;
-            background: linear-gradient(135deg, #0a0a1a 0%, #1a1a3e 100%);
         }
 
         .hero::before {
@@ -144,21 +113,6 @@
             z-index: 1;
         }
 
-        .hero-text {
-            animation: fadeInUp 1s ease;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
         .pill {
             display: inline-block;
             background: linear-gradient(135deg, #7c3aed, #ec4899);
@@ -168,61 +122,45 @@
             font-size: 0.9rem;
             font-weight: 600;
             margin-bottom: 1.5rem;
-            box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
         }
 
         .hero h1 {
             font-size: clamp(2.5rem, 5vw, 4.5rem);
             line-height: 1.1;
             margin-bottom: 1rem;
-            font-weight: 800;
         }
 
         .gradient-text {
-            background: linear-gradient(135deg, #8b5cf6, #ec4899, #f59e0b);
+            background: linear-gradient(135deg, #8b5cf6, #ec4899);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: gradientShift 3s ease infinite;
-            background-size: 200% 200%;
-        }
-
-        @keyframes gradientShift {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
         }
 
         .hero h2 {
             font-size: 1.4rem;
             color: #cbd5e1;
             margin-bottom: 1.5rem;
-            font-weight: 400;
             min-height: 2rem;
         }
 
         .hero p {
             color: #94a3b8;
             font-size: 1.1rem;
-            line-height: 1.8;
             margin-bottom: 2rem;
-            max-width: 600px;
         }
 
         .hero-buttons {
             display: flex;
             gap: 1rem;
             margin-bottom: 2rem;
-            flex-wrap: wrap;
         }
 
         .btn {
             padding: 0.8rem 1.5rem;
             border-radius: 0.5rem;
             font-weight: 600;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
+            text-decoration: none;
+            transition: 0.3s;
             cursor: pointer;
             border: none;
             font-size: 1rem;
@@ -231,12 +169,6 @@
         .btn-primary {
             background: linear-gradient(135deg, #7c3aed, #ec4899);
             color: white;
-            box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(168, 85, 247, 0.4);
         }
 
         .btn-outline {
@@ -245,9 +177,7 @@
             background: transparent;
         }
 
-        .btn-outline:hover {
-            border-color: #c084fc;
-            color: #c084fc;
+        .btn:hover {
             transform: translateY(-3px);
         }
 
@@ -265,32 +195,23 @@
             justify-content: center;
             border-radius: 50%;
             background: rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
+            transition: 0.3s;
             color: white;
+            text-decoration: none;
         }
 
         .socials a:hover {
             background: #7c3aed;
             transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(124, 58, 237, 0.4);
-        }
-
-        .hero-image {
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
 
         .profile-photo {
             width: 100%;
             max-width: 400px;
-            height: auto;
+            height: 400px;
             border-radius: 2rem;
             border: 3px solid rgba(192, 132, 252, 0.3);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-            transition: all 0.3s ease;
             background: #1a1a3e;
-            min-height: 400px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -298,30 +219,15 @@
             color: #c084fc;
         }
 
-        .profile-photo:hover {
-            transform: scale(1.02);
-            box-shadow: 0 25px 50px rgba(168, 85, 247, 0.3);
-        }
-
-        /* ============ SECTIONS ============ */
+        /* Sections */
         section {
             padding: 5rem 0;
-        }
-
-        .section-card {
-            background: rgba(26, 26, 62, 0.5);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 2rem;
-            padding: 3rem;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
         }
 
         .section-title {
             font-size: 2.5rem;
             margin-bottom: 2rem;
             text-align: center;
-            font-weight: 800;
         }
 
         .section-title span {
@@ -332,71 +238,20 @@
             text-align: center;
             color: #94a3b8;
             margin-bottom: 3rem;
-            font-size: 1.1rem;
         }
 
-        .subsection-title {
-            font-size: 1.8rem;
-            margin: 3rem 0 1.5rem;
-            text-align: center;
-            color: #c084fc;
-        }
-
-        /* ============ ABOUT SECTION ============ */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 3rem;
-            align-items: start;
-        }
-
-        .about-text p {
-            color: #cbd5e1;
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-        }
-
-        .mini-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-
-        .mini-card {
-            background: rgba(255, 255, 255, 0.05);
+        .section-card {
+            background: rgba(26, 26, 62, 0.5);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 1rem;
-            padding: 1.5rem;
-            transition: all 0.3s ease;
+            border-radius: 2rem;
+            padding: 3rem;
         }
 
-        .mini-card:hover {
-            background: rgba(168, 85, 247, 0.1);
-            border-color: #c084fc;
-            transform: translateX(10px);
-        }
-
-        .icon {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .mini-card h3 {
-            margin-bottom: 0.5rem;
-            color: #f8fafc;
-        }
-
-        .mini-card p {
-            color: #94a3b8;
-            line-height: 1.6;
-        }
-
-        /* ============ SKILLS SECTION ============ */
+        /* Skills */
         .skills-row {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1.5rem;
-            margin-bottom: 3rem;
         }
 
         .skill-card {
@@ -405,46 +260,16 @@
             border-radius: 1rem;
             padding: 2rem;
             text-align: center;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .skill-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, #7c3aed, #ec4899);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        .skill-card:hover::before {
-            transform: scaleX(1);
+            transition: 0.3s;
         }
 
         .skill-card:hover {
             transform: translateY(-10px);
             border-color: #c084fc;
-            box-shadow: 0 10px 30px rgba(168, 85, 247, 0.2);
         }
 
         .skill-emoji {
             font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .skill-card h3 {
-            margin-bottom: 0.5rem;
-            color: #f8fafc;
-        }
-
-        .skill-card p {
-            color: #94a3b8;
-            font-size: 0.9rem;
             margin-bottom: 1rem;
         }
 
@@ -455,32 +280,9 @@
             background: rgba(168, 85, 247, 0.2);
             color: #c084fc;
             font-size: 0.8rem;
-            font-weight: 600;
         }
 
-        .soft-skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            justify-content: center;
-        }
-
-        .soft-skill-tag {
-            padding: 0.5rem 1rem;
-            border-radius: 999px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: #cbd5e1;
-            transition: all 0.3s ease;
-        }
-
-        .soft-skill-tag:hover {
-            background: rgba(168, 85, 247, 0.2);
-            border-color: #c084fc;
-            color: #f8fafc;
-        }
-
-        /* ============ PROJECTS SECTION ============ */
+        /* Projects */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -492,53 +294,23 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 1.5rem;
             overflow: hidden;
-            transition: all 0.3s ease;
             cursor: pointer;
-            position: relative;
+            transition: 0.3s;
         }
 
         .project-card:hover {
             transform: translateY(-10px);
             border-color: #c084fc;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
 
         .project-image {
-            position: relative;
-            overflow: hidden;
-            height: 250px;
-            background: #1a1a3e;
+            height: 200px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 5rem;
+            background: #1a1a3e;
             color: #c084fc;
-        }
-
-        .project-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.7);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .project-card:hover .project-overlay {
-            opacity: 1;
-        }
-
-        .project-overlay span {
-            color: white;
-            font-weight: 600;
-            padding: 0.5rem 1rem;
-            border: 2px solid #c084fc;
-            border-radius: 0.5rem;
         }
 
         .project-content {
@@ -560,205 +332,49 @@
             font-size: 0.8rem;
         }
 
-        .project-content h3 {
-            margin-bottom: 0.5rem;
-            color: #f8fafc;
-        }
-
-        .project-content p {
-            color: #94a3b8;
-            margin-bottom: 1rem;
-            line-height: 1.6;
-        }
-
-        .project-meta {
-            display: flex;
-            gap: 1rem;
-            color: #94a3b8;
-            font-size: 0.9rem;
-        }
-
-        .project-meta i {
-            margin-right: 0.3rem;
-            color: #c084fc;
-        }
-
-        /* ============ LEARNING JOURNEY ============ */
-        .journey-timeline {
-            position: relative;
-            padding-left: 2rem;
-        }
-
-        .journey-timeline::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: linear-gradient(180deg, #7c3aed, #ec4899);
-        }
-
-        .journey-item {
-            position: relative;
-            margin-bottom: 2rem;
-            padding-left: 2rem;
-        }
-
-        .journey-item::before {
-            content: '';
-            position: absolute;
-            left: -6px;
-            top: 10px;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #c084fc;
-            border: 2px solid #0a0a1a;
-        }
-
-        .journey-date {
-            font-weight: 600;
-            color: #c084fc;
-            margin-bottom: 0.3rem;
-        }
-
-        .journey-content h3 {
-            color: #f8fafc;
-            margin-bottom: 0.3rem;
-        }
-
-        .journey-content p {
-            color: #94a3b8;
-        }
-
-        /* ============ CERTIFICATIONS ============ */
-        .cert-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .cert-card {
-            background: rgba(26, 26, 62, 0.5);
+        /* Code Viewer */
+        .code-viewer {
+            background: #1a1a3e;
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 1rem;
             padding: 1.5rem;
-            transition: all 0.3s ease;
+            margin: 1rem 0;
+            overflow-x: auto;
+            position: relative;
         }
 
-        .cert-card:hover {
-            transform: translateY(-5px);
-            border-color: #c084fc;
-            box-shadow: 0 10px 30px rgba(168, 85, 247, 0.2);
-        }
-
-        .cert-icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .cert-card h3 {
-            color: #f8fafc;
-            margin-bottom: 0.5rem;
-        }
-
-        .cert-card p {
-            color: #94a3b8;
-            margin-bottom: 0.3rem;
-        }
-
-        .cert-date {
-            font-weight: 600;
-            color: #c084fc;
-        }
-
-        .cert-skills {
+        .code-viewer pre {
+            margin: 0;
+            color: #e2e8f0;
+            font-family: 'Courier New', monospace;
             font-size: 0.9rem;
+            line-height: 1.5;
         }
 
-        /* ============ CONTACT ============ */
-        .contact-card {
-            background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(236, 72, 153, 0.1));
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 2rem;
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-
-        .contact-card h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #f8fafc;
-        }
-
-        .contact-intro {
-            color: #94a3b8;
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
-        }
-
-        .contact-methods {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .contact-method {
-            padding: 1.5rem;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 1rem;
-        }
-
-        .contact-method i {
-            font-size: 2rem;
-            color: #c084fc;
-            margin-bottom: 1rem;
-        }
-
-        .contact-method h3 {
-            color: #f8fafc;
-            margin-bottom: 0.5rem;
-        }
-
-        .contact-method p {
-            color: #94a3b8;
-        }
-
-        .contact-method a {
-            color: #c084fc;
-        }
-
-        /* ============ FOOTER ============ */
-        footer {
-            background: rgba(10, 10, 26, 0.95);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 2rem 0;
-            text-align: center;
-        }
-
-        footer p {
-            color: #94a3b8;
-            margin-bottom: 1rem;
-        }
-
-        .footer-links {
+        .code-header {
             display: flex;
-            gap: 2rem;
-            justify-content: center;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .footer-links a {
-            color: #cbd5e1;
-            transition: color 0.3s ease;
+        .copy-btn {
+            padding: 0.5rem 1rem;
+            background: #7c3aed;
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-size: 0.8rem;
         }
 
-        .footer-links a:hover {
-            color: #c084fc;
+        .copy-btn:hover {
+            background: #6d28d9;
         }
 
-        /* ============ MODAL ============ */
+        /* Modal */
         .modal {
             display: none;
             position: fixed;
@@ -767,75 +383,18 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
+            background: rgba(0, 0, 0, 0.9);
             overflow-y: auto;
-            animation: fadeIn 0.3s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
         }
 
         .modal-content {
             background: #1a1a3e;
             margin: 5% auto;
             padding: 2rem;
-            border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 1.5rem;
             width: 90%;
-            max-width: 800px;
+            max-width: 900px;
             position: relative;
-            animation: slideUp 0.3s ease;
-        }
-
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .modal-content h2 {
-            color: #c084fc;
-            margin-bottom: 1rem;
-            font-size: 2rem;
-        }
-
-        .modal-content h3 {
-            color: #f8fafc;
-            margin: 2rem 0 1rem;
-            font-size: 1.3rem;
-        }
-
-        .modal-content p {
-            color: #cbd5e1;
-            line-height: 1.8;
-            margin-bottom: 1rem;
-        }
-
-        .modal-content ul {
-            list-style: none;
-            padding: 0;
-            margin: 1rem 0;
-        }
-
-        .modal-content li {
-            color: #cbd5e1;
-            margin-bottom: 0.5rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        .modal-content li::before {
-            content: '▸';
-            position: absolute;
-            left: 0;
-            color: #c084fc;
         }
 
         .close {
@@ -843,71 +402,36 @@
             right: 1.5rem;
             top: 1rem;
             font-size: 2rem;
-            font-weight: bold;
-            color: #fff;
             cursor: pointer;
-            transition: all 0.3s ease;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
+            color: white;
         }
 
         .close:hover {
             color: #c084fc;
-            background: rgba(255, 255, 255, 0.1);
         }
 
-        .tech-tags {
-            display: flex;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
-            flex-wrap: wrap;
+        /* Cloud & Security Section */
+        .cloud-security-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
         }
 
-        .tech-tag {
-            padding: 0.4rem 1rem;
-            border-radius: 999px;
-            background: rgba(168, 85, 247, 0.2);
-            color: #c084fc;
-            font-size: 0.9rem;
-        }
-
-        .code-block {
-            background: #0a0a1a;
+        .cloud-card {
+            background: rgba(26, 26, 62, 0.5);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 0.5rem;
-            padding: 1.5rem;
-            margin: 1rem 0;
-            overflow-x: auto;
+            border-radius: 1rem;
+            padding: 2rem;
+            text-align: center;
         }
 
-        .code-block pre {
-            margin: 0;
+        .cloud-card i {
+            font-size: 4rem;
+            color: #c084fc;
+            margin-bottom: 1rem;
         }
 
-        .code-block code {
-            color: #e2e8f0;
-            font-family: 'Courier New', monospace;
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
-
-        /* ============ PROGRESS BAR ============ */
-        .progress-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 0%;
-            height: 3px;
-            background: linear-gradient(90deg, #7c3aed, #ec4899);
-            z-index: 9999;
-            transition: width 0.3s ease;
-        }
-
-        /* ============ RESPONSIVE DESIGN ============ */
+        /* Responsive */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -918,71 +442,41 @@
                 background: #0a0a1a;
                 flex-direction: column;
                 padding: 1rem;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             }
-            
+
             .nav-links.active {
                 display: flex;
             }
-            
+
             .hamburger {
                 display: block;
             }
-            
+
             .hero-content {
                 grid-template-columns: 1fr;
                 text-align: center;
             }
-            
-            .hero-image {
-                order: -1;
-            }
-            
+
             .profile-photo {
                 max-width: 250px;
-                min-height: 250px;
+                height: 250px;
                 font-size: 5rem;
                 margin: 0 auto;
             }
-            
-            .hero-buttons {
+
+            .hero-buttons, .socials {
                 justify-content: center;
             }
-            
-            .socials {
-                justify-content: center;
-            }
-            
-            .about-grid {
-                grid-template-columns: 1fr;
-            }
-            
+
             .projects-grid {
                 grid-template-columns: 1fr;
-            }
-            
-            .section-card {
-                padding: 2rem;
-            }
-            
-            .contact-methods {
-                grid-template-columns: 1fr;
-            }
-            
-            .modal-content {
-                margin: 2% auto;
-                padding: 1.5rem;
-                width: 95%;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Progress Bar -->
-    <div class="progress-bar" id="progressBar"></div>
-
     <!-- Navigation -->
-    <nav id="navbar">
+    <nav>
         <div class="container nav-content">
             <a href="#home" class="logo">Gomolemo <span>Chenepe</span></a>
             <div class="nav-links" id="navLinks">
@@ -990,8 +484,7 @@
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
-                <a href="#learning">Journey</a>
-                <a href="#certifications">Certifications</a>
+                <a href="#cloud-security">Cloud & Security</a>
                 <a href="#contact">Contact</a>
             </div>
             <div class="hamburger" onclick="toggleMenu()">
@@ -1003,30 +496,26 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container hero-content">
-            <div class="hero-text">
-                <div class="pill">Aspiring Tech Professional </div>
+            <div>
+                <div class="pill">Aspiring Tech Professional</div>
                 <h1>Hi, I'm <br><span class="gradient-text">Gomolemo Chenepe</span></h1>
                 <h2 id="typing-text"></h2>
                 <p>
-                    I'm a BSc Biological Sciences student with a passion for technology, 
-                    data, and problem-solving. Currently building my skills in Python, 
-                    Java, and MySQL while creating real-world projects that demonstrate 
-                    my ability to learn and apply technical concepts.
+                    BSc Biological Sciences student transitioning into tech. Proficient in Python, Java, and MySQL.
+                    Passionate about cloud computing, cybersecurity, and data-driven solutions.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Projects →</a>
-                    <a href="#contact" class="btn btn-outline">Let's Connect</a>
+                    <a href="#projects" class="btn btn-primary">View Projects →</a>
+                    <a href="#contact" class="btn btn-outline">Contact Me</a>
                 </div>
                 <div class="socials">
-                    <a href="mailto:gchenepe@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-                    <a href="https://github.com/yourusername" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/in/yourusername" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:gchenepe@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="profile-photo">
-                    <i class="fas fa-user-circle"></i>
-                </div>
+            <div class="profile-photo">
+                <i class="fas fa-user-circle"></i>
             </div>
         </div>
     </section>
@@ -1034,52 +523,17 @@
     <!-- About Section -->
     <section id="about">
         <div class="container">
+            <h2 class="section-title"><span>✦</span> About Me</h2>
             <div class="section-card">
-                <h2 class="section-title"><span>✦</span> About Me</h2>
-                <div class="about-grid">
-                    <div class="about-text">
-                        <p>
-                            Hello! I'm Gomolemo, a curious learner who discovered that combining 
-                            biology with technology opens up incredible possibilities. My journey 
-                            into tech started when I realized that data analysis and programming 
-                            could help solve real problems in healthcare and beyond.
-                        </p>
-                        <p>
-                            As a student at the University of Pretoria, I'm not just studying 
-                            biology—I'm actively building my tech skills through hands-on projects. 
-                            I believe in learning by doing, which is why I've created portfolio 
-                            projects that showcase my growing expertise in Python, Java, and MySQL.
-                        </p>
-                        <p>
-                            My unique background gives me an edge: I understand scientific thinking, 
-                            data interpretation, and have the analytical mindset needed for tech. 
-                            I'm looking for opportunities to grow, learn, and contribute as an 
-                            intern or junior developer.
-                        </p>
-                    </div>
-                    <div class="mini-grid">
-                        <div class="mini-card">
-                            <div class="icon">🎓</div>
-                            <h3>Education</h3>
-                            <p>BSc Biological Sciences<br>University of Pretoria<br>2023 - Present</p>
-                        </div>
-                        <div class="mini-card">
-                            <div class="icon">🎯</div>
-                            <h3>Career Goal</h3>
-                            <p>Data Analyst / Software Developer<br>Focus on healthcare and<br>data-driven solutions</p>
-                        </div>
-                        <div class="mini-card">
-                            <div class="icon">💼</div>
-                            <h3>Experience</h3>
-                            <p>Tutor - University of Pretoria <br>Helping students with<br>Physics</p>
-                        </div>
-                        <div class="mini-card">
-                            <div class="icon">🚀</div>
-                            <h3>Current Focus</h3>
-                            <p>Building portfolio projects<br>Learning cloud computing<br>Preparing for tech career</p>
-                        </div>
-                    </div>
-                </div>
+                <p>
+                    I'm a curious learner who discovered that combining biology with technology opens incredible possibilities.
+                    My journey into tech started when I realized data analysis and programming could solve real problems in healthcare.
+                </p>
+                <br>
+                <p>
+                    Currently building my skills in Python, Java, and MySQL while exploring cloud computing and cybersecurity.
+                    I believe in learning by doing, which is why I've created real, working projects that demonstrate my abilities.
+                </p>
             </div>
         </div>
     </section>
@@ -1092,61 +546,39 @@
                 <div class="skill-card">
                     <div class="skill-emoji">🐍</div>
                     <h3>Python</h3>
-                    <p>Data analysis, automation, scripting</p>
-                    <div class="skill-level">Beginner-Intermediate</div>
+                    <p>Data analysis, automation, web scraping</p>
+                    <span class="skill-level">Intermediate</span>
                 </div>
                 <div class="skill-card">
                     <div class="skill-emoji">☕</div>
                     <h3>Java</h3>
-                    <p>OOP, basic applications</p>
-                    <div class="skill-level">Beginner</div>
+                    <p>OOP, desktop applications</p>
+                    <span class="skill-level">Beginner-Intermediate</span>
                 </div>
                 <div class="skill-card">
                     <div class="skill-emoji">🗄️</div>
-                    <h3>SQL</h3>
-                    <p>Database queries, management</p>
-                    <div class="skill-level">Intermediate</div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-emoji">🐬</div>
                     <h3>MySQL</h3>
-                    <p>Database design, administration</p>
-                    <div class="skill-level">Intermediate</div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-emoji">📊</div>
-                    <h3>Excel</h3>
-                    <p>Data organization, pivot tables</p>
-                    <div class="skill-level">Intermediate</div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-emoji">🌐</div>
-                    <h3>HTML/CSS</h3>
-                    <p>Basic web development</p>
-                    <div class="skill-level">Beginner</div>
+                    <p>Database design, complex queries</p>
+                    <span class="skill-level">Intermediate</span>
                 </div>
                 <div class="skill-card">
                     <div class="skill-emoji">☁️</div>
-                    <h3>Cloud Basics</h3>
-                    <p>AWS fundamentals, deployment</p>
-                    <div class="skill-level">Beginner</div>
+                    <h3>Cloud Computing</h3>
+                    <p>AWS, Azure fundamentals</p>
+                    <span class="skill-level">Beginner</span>
                 </div>
                 <div class="skill-card">
                     <div class="skill-emoji">🔐</div>
                     <h3>Cybersecurity</h3>
-                    <p>Security awareness, best practices</p>
-                    <div class="skill-level">Beginner</div>
+                    <p>Security principles, threat detection</p>
+                    <span class="skill-level">Beginner</span>
                 </div>
-            </div>
-            
-            <h3 class="subsection-title">Soft Skills</h3>
-            <div class="soft-skills">
-                <span class="soft-skill-tag">Problem Solving</span>
-                <span class="soft-skill-tag">Analytical Thinking</span>
-                <span class="soft-skill-tag">Communication</span>
-                <span class="soft-skill-tag">Team Collaboration</span>
-                <span class="soft-skill-tag">Adaptability</span>
-                <span class="soft-skill-tag">Quick Learner</span>
+                <div class="skill-card">
+                    <div class="skill-emoji">📊</div>
+                    <h3>Data Analysis</h3>
+                    <p>Pandas, NumPy, visualization</p>
+                    <span class="skill-level">Intermediate</span>
+                </div>
             </div>
         </div>
     </section>
@@ -1154,12 +586,12 @@
     <!-- Projects Section -->
     <section id="projects">
         <div class="container">
-            <h2 class="section-title"><span>✦</span> Featured Projects</h2>
-            <p class="section-subtitle">Each project represents a step in my learning journey</p>
+            <h2 class="section-title"><span>✦</span> My Projects</h2>
+            <p class="section-subtitle">Click on any project to view the complete source code</p>
             
             <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card" onclick="openModal('universityModal')">
+                <!-- MySQL Project -->
+                <div class="project-card" onclick="openModal('mysqlModal')">
                     <div class="project-image">
                         <i class="fas fa-database"></i>
                     </div>
@@ -1168,191 +600,93 @@
                             <span>MySQL</span>
                             <span>Database Design</span>
                         </div>
-                        <h3>University Academic Management Database</h3>
-                        <p>A comprehensive MySQL database system for managing students, courses, and academic records.</p>
-                        <div class="project-meta">
-                            <span><i class="fas fa-clock"></i> 2 weeks</span>
-                            <span><i class="fas fa-tasks"></i> Complex</span>
-                        </div>
+                        <h3>University Database System</h3>
+                        <p>Complete MySQL database for managing students, courses, and academic records.</p>
                     </div>
                 </div>
 
-                <!-- Project 2 -->
-                <div class="project-card" onclick="openModal('healthcareModal')">
+                <!-- Python Project -->
+                <div class="project-card" onclick="openModal('pythonModal')">
                     <div class="project-image">
-                        <i class="fas fa-heartbeat"></i>
+                        <i class="fab fa-python"></i>
                     </div>
                     <div class="project-content">
                         <div class="project-tags">
                             <span>Python</span>
                             <span>Data Analysis</span>
                         </div>
-                        <h3>Healthcare Data Analysis System</h3>
-                        <p>Python-based system for analyzing patient data and identifying health trends.</p>
-                        <div class="project-meta">
-                            <span><i class="fas fa-clock"></i> 3 weeks</span>
-                            <span><i class="fas fa-tasks"></i> Intermediate</span>
-                        </div>
+                        <h3>Healthcare Data Analyzer</h3>
+                        <p>Python application for analyzing patient data and generating health insights.</p>
                     </div>
                 </div>
 
-                <!-- Project 3 -->
-                <div class="project-card" onclick="openModal('cyberModal')">
+                <!-- Java Project -->
+                <div class="project-card" onclick="openModal('javaModal')">
                     <div class="project-image">
-                        <i class="fas fa-shield-alt"></i>
+                        <i class="fab fa-java"></i>
                     </div>
                     <div class="project-content">
                         <div class="project-tags">
                             <span>Java</span>
                             <span>Security</span>
                         </div>
-                        <h3>Login Security Monitoring System</h3>
-                        <p>Java application for detecting and alerting on suspicious login activities.</p>
-                        <div class="project-meta">
-                            <span><i class="fas fa-clock"></i> 1 week</span>
-                            <span><i class="fas fa-tasks"></i> Basic</span>
-                        </div>
+                        <h3>Password Security Checker</h3>
+                        <p>Java application for analyzing password strength and security.</p>
                     </div>
                 </div>
 
-                <!-- Project 4 -->
-                <div class="project-card" onclick="openModal('gradeCalcModal')">
+                <!-- Cloud Project -->
+                <div class="project-card" onclick="openModal('cloudModal')">
                     <div class="project-image">
-                        <i class="fas fa-calculator"></i>
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span>AWS</span>
+                            <span>Cloud</span>
+                        </div>
+                        <h3>Cloud Architecture Design</h3>
+                        <p>AWS cloud architecture for hosting a scalable web application.</p>
+                    </div>
+                </div>
+
+                <!-- Cybersecurity Project -->
+                <div class="project-card" onclick="openModal('securityModal')">
+                    <div class="project-image">
+                        <i class="fas fa-shield-alt"></i>
                     </div>
                     <div class="project-content">
                         <div class="project-tags">
                             <span>Python</span>
-                            <span>GUI</span>
+                            <span>Security</span>
                         </div>
-                        <h3>Student Grade Calculator</h3>
-                        <p>Python application with GUI for calculating and analyzing student grades.</p>
-                        <div class="project-meta">
-                            <span><i class="fas fa-clock"></i> 3 days</span>
-                            <span><i class="fas fa-tasks"></i> Beginner</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 5 -->
-                <div class="project-card" onclick="openModal('financeModal')">
-                    <div class="project-image">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-tags">
-                            <span>Python</span>
-                            <span>Excel</span>
-                        </div>
-                        <h3>Personal Finance Tracker</h3>
-                        <p>Python script for tracking expenses and generating financial reports.</p>
-                        <div class="project-meta">
-                            <span><i class="fas fa-clock"></i> 5 days</span>
-                            <span><i class="fas fa-tasks"></i> Beginner</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 6 -->
-                <div class="project-card" onclick="openModal('covidModal')">
-                    <div class="project-image">
-                        <i class="fas fa-virus"></i>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-tags">
-                            <span>Python</span>
-                            <span>Data Viz</span>
-                        </div>
-                        <h3>COVID-19 Data Visualization</h3>
-                        <p>Interactive dashboard analyzing COVID-19 trends using public datasets.</p>
-                        <div class="project-meta">
-                            <span><i class="fas fa-clock"></i> 2 weeks</span>
-                            <span><i class="fas fa-tasks"></i> Intermediate</span>
-                        </div>
+                        <h3>Network Security Scanner</h3>
+                        <p>Python tool for scanning networks and identifying security vulnerabilities.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Learning Journey Section -->
-    <section id="learning">
+    <!-- Cloud & Security Section -->
+    <section id="cloud-security">
         <div class="container">
-            <div class="section-card">
-                <h2 class="section-title"><span>✦</span> My Learning Journey</h2>
-                <div class="journey-timeline">
-                    <div class="journey-item">
-                        <div class="journey-date">2023 - Present</div>
-                        <div class="journey-content">
-                            <h3>BSc Biological Sciences</h3>
-                            <p>University of Pretoria - Developing analytical and research skills</p>
-                        </div>
-                    </div>
-                    <div class="journey-item">
-                        <div class="journey-date">2024</div>
-                        <div class="journey-content">
-                            <h3>Tech Skills Development</h3>
-                            <p>Started learning Python, Java, and MySQL through projects</p>
-                        </div>
-                    </div>
-                    <div class="journey-item">
-                        <div class="journey-date">2024</div>
-                        <div class="journey-content">
-                            <h3>Cloud & Cybersecurity</h3>
-                            <p>Completed Codecademy certifications in cloud computing and security</p>
-                        </div>
-                    </div>
-                    <div class="journey-item">
-                        <div class="journey-date">2024 - Present</div>
-                        <div class="journey-content">
-                            <h3>Portfolio Building</h3>
-                            <p>Creating real-world projects to demonstrate technical abilities</p>
-                        </div>
-                    </div>
-                    <div class="journey-item">
-                        <div class="journey-date">2025</div>
-                        <div class="journey-content">
-                            <h3>Next Steps</h3>
-                            <p>Seeking internships and junior developer opportunities</p>
-                        </div>
-                    </div>
+            <h2 class="section-title"><span>✦</span> Cloud & Security Focus</h2>
+            <div class="cloud-security-grid">
+                <div class="cloud-card">
+                    <i class="fas fa-cloud"></i>
+                    <h3>Cloud Computing</h3>
+                    <p>AWS, Azure, and GCP fundamentals. Understanding of cloud architecture, deployment models, and services.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Certifications Section -->
-    <section id="certifications">
-        <div class="container">
-            <h2 class="section-title"><span>✦</span> Certifications & Courses</h2>
-            <div class="cert-grid">
-                <div class="cert-card">
-                    <div class="cert-icon">☁️</div>
-                    <h3>Introduction to Cloud Computing</h3>
-                    <p>Codecademy</p>
-                    <p class="cert-date">Completed: 2024</p>
-                    <p class="cert-skills">Skills: Cloud services, infrastructure, deployment</p>
+                <div class="cloud-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Cybersecurity</h3>
+                    <p>Network security, threat detection, encryption, and security best practices.</p>
                 </div>
-                <div class="cert-card">
-                    <div class="cert-icon">🔐</div>
-                    <h3>Introduction to Cybersecurity</h3>
-                    <p>Codecademy</p>
-                    <p class="cert-date">Completed: 2024</p>
-                    <p class="cert-skills">Skills: Security principles, threat awareness</p>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon">🐍</div>
-                    <h3>Python for Beginners</h3>
-                    <p>Self-paced learning</p>
-                    <p class="cert-date">In Progress</p>
-                    <p class="cert-skills">Skills: Python basics, data structures</p>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon">📊</div>
-                    <h3>Data Analysis Fundamentals</h3>
-                    <p>Online courses</p>
-                    <p class="cert-date">In Progress</p>
-                    <p class="cert-skills">Skills: Data cleaning, analysis, visualization</p>
+                <div class="cloud-card">
+                    <i class="fas fa-lock"></i>
+                    <h3>Security Tools</h3>
+                    <p>Experience with security tools and concepts including firewalls, VPNs, and encryption.</p>
                 </div>
             </div>
         </div>
@@ -1361,212 +695,833 @@
     <!-- Contact Section -->
     <section id="contact">
         <div class="container">
-            <div class="contact-card">
-                <h2>Let's Connect!</h2>
-                <p class="contact-intro">I'm actively looking for internships and learning opportunities</p>
-                <div class="contact-methods">
-                    <div class="contact-method">
-                        <i class="fas fa-envelope"></i>
-                        <h3>Email</h3>
-                        <p><a href="mailto:gchenepe@gmail.com">gchenepe@gmail.com</a></p>
-                    </div>
-                    <div class="contact-method">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <h3>Location</h3>
-                        <p>Pretoria / Johannesburg, South Africa</p>
-                    </div>
-                    <div class="contact-method">
-                        <i class="fas fa-briefcase"></i>
-                        <h3>Open To</h3>
-                        <p>Internships, Junior Developer Roles, Data Analysis Positions</p>
-                    </div>
-                </div>
-                <a href="mailto:gchenepe@gmail.com" class="btn btn-primary">Send Me an Email</a>
+            <h2 class="section-title"><span>✦</span> Contact Me</h2>
+            <div class="section-card" style="text-align: center;">
+                <h3>Let's Connect!</h3>
+                <p>I'm actively looking for internships and learning opportunities</p>
+                <br>
+                <p>📧 Email: <a href="mailto:gchenepe@gmail.com" style="color: #c084fc;">gchenepe@gmail.com</a></p>
+                <p>📍 Location: Pretoria / Johannesburg, South Africa</p>
+                <br>
+                <a href="mailto:gchenepe@gmail.com" class="btn btn-primary">Send Email</a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>© 2024 Gomolemo Chenepe. Built with passion and continuous learning.</p>
-            <div class="footer-links">
-                <a href="#home">Home</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Modals -->
-    <!-- University Database Modal -->
-    <div id="universityModal" class="modal">
+    <!-- Modals with Complete Code -->
+    <!-- MySQL Modal -->
+    <div id="mysqlModal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeModal('universityModal')">&times;</span>
-            <h2>University Academic Management Database</h2>
-            <div class="tech-tags">
-                <span class="tech-tag">MySQL</span>
-                <span class="tech-tag">Database Design</span>
-                <span class="tech-tag">SQL</span>
-            </div>
-            <div class="modal-body">
-                <h3>📋 Project Overview</h3>
-                <p>Designed and implemented a comprehensive MySQL database system for university academic management. This project demonstrates my understanding of relational database design, normalization, and complex query optimization.</p>
-                
-                <h3>🎯 Why I Built This</h3>
-                <p>As a student, I noticed the complexity of managing academic records. I wanted to create a system that could handle student enrollment, course management, and academic tracking efficiently.</p>
-                
-                <h3>💡 What I Learned</h3>
-                <ul>
-                    <li>Database normalization (3NF) and why it matters</li>
-                    <li>Complex JOIN operations and subqueries</li>
-                    <li>Stored procedures and triggers for automation</li>
-                    <li>Index optimization for performance</li>
-                    <li>Real-world database design challenges</li>
-                </ul>
-                
-                <h3>🔧 Technical Implementation</h3>
-                <div class="code-block">
-<pre><code>CREATE TABLE students (
+            <span class="close" onclick="closeModal('mysqlModal')">&times;</span>
+            <h2>University Database System - MySQL</h2>
+            <p>Complete database schema and queries</p>
+            
+            <div class="code-viewer">
+                <div class="code-header">
+                    <span>database.sql</span>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+                <pre><code>-- Create Database
+CREATE DATABASE university_management;
+USE university_management;
+
+-- Departments Table
+CREATE TABLE departments (
+    department_id INT PRIMARY KEY AUTO_INCREMENT,
+    department_code VARCHAR(10) UNIQUE NOT NULL,
+    department_name VARCHAR(100) NOT NULL,
+    head_of_department INT,
+    established_year YEAR,
+    contact_email VARCHAR(100),
+    contact_phone VARCHAR(20)
+);
+
+-- Students Table
+CREATE TABLE students (
     student_id INT PRIMARY KEY AUTO_INCREMENT,
     registration_number VARCHAR(20) UNIQUE NOT NULL,
     first_name VARCHAR(50) NOT NULL,
     last_name VARCHAR(50) NOT NULL,
+    date_of_birth DATE NOT NULL,
+    gender ENUM('Male', 'Female', 'Other') NOT NULL,
     email VARCHAR(100) UNIQUE NOT NULL,
+    phone VARCHAR(20),
+    address TEXT,
     enrollment_date DATE NOT NULL,
+    expected_graduation_date DATE,
+    current_semester INT DEFAULT 1,
     department_id INT,
+    status ENUM('Active', 'Inactive', 'Graduated', 'Suspended') DEFAULT 'Active',
     cgpa DECIMAL(4,2) DEFAULT 0.00,
     FOREIGN KEY (department_id) REFERENCES departments(department_id)
-);</code></pre>
+);
+
+-- Courses Table
+CREATE TABLE courses (
+    course_id INT PRIMARY KEY AUTO_INCREMENT,
+    course_code VARCHAR(15) UNIQUE NOT NULL,
+    course_name VARCHAR(100) NOT NULL,
+    description TEXT,
+    credits INT NOT NULL CHECK (credits > 0 AND credits <= 6),
+    course_level ENUM('Undergraduate', 'Graduate', 'Postgraduate') DEFAULT 'Undergraduate',
+    department_id INT,
+    prerequisite_course_id INT,
+    max_enrollment INT DEFAULT 60,
+    FOREIGN KEY (department_id) REFERENCES departments(department_id),
+    FOREIGN KEY (prerequisite_course_id) REFERENCES courses(course_id)
+);
+
+-- Tutors Table
+CREATE TABLE tutors (
+    tutor_id INT PRIMARY KEY AUTO_INCREMENT,
+    employee_id VARCHAR(20) UNIQUE NOT NULL,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    specialization VARCHAR(100),
+    department_id INT,
+    designation VARCHAR(50),
+    FOREIGN KEY (department_id) REFERENCES departments(department_id)
+);
+
+-- Course Offerings Table
+CREATE TABLE course_offerings (
+    offering_id INT PRIMARY KEY AUTO_INCREMENT,
+    course_id INT NOT NULL,
+    semester VARCHAR(20) NOT NULL,
+    tutor_id INT,
+    section_number VARCHAR(5) DEFAULT '01',
+    schedule_day VARCHAR(20),
+    schedule_time TIME,
+    room_number VARCHAR(20),
+    current_enrollment INT DEFAULT 0,
+    FOREIGN KEY (course_id) REFERENCES courses(course_id),
+    FOREIGN KEY (tutor_id) REFERENCES tutors(tutor_id)
+);
+
+-- Enrollments Table
+CREATE TABLE enrollments (
+    enrollment_id INT PRIMARY KEY AUTO_INCREMENT,
+    student_id INT NOT NULL,
+    offering_id INT NOT NULL,
+    enrollment_date DATE NOT NULL,
+    status ENUM('Enrolled', 'Waitlisted', 'Dropped', 'Completed') DEFAULT 'Enrolled',
+    grade VARCHAR(3),
+    FOREIGN KEY (student_id) REFERENCES students(student_id),
+    FOREIGN KEY (offering_id) REFERENCES course_offerings(offering_id)
+);
+
+-- Sample Queries
+-- Get student performance
+SELECT 
+    s.student_id,
+    s.registration_number,
+    CONCAT(s.first_name, ' ', s.last_name) AS full_name,
+    d.department_name,
+    s.cgpa,
+    COUNT(e.enrollment_id) AS courses_taken
+FROM students s
+JOIN departments d ON s.department_id = d.department_id
+LEFT JOIN enrollments e ON s.student_id = e.student_id
+GROUP BY s.student_id
+HAVING s.cgpa >= 3.5
+ORDER BY s.cgpa DESC;
+
+-- Stored Procedure for enrollment
+DELIMITER //
+CREATE PROCEDURE enroll_student(
+    IN p_student_id INT,
+    IN p_offering_id INT,
+    OUT p_status VARCHAR(50)
+)
+BEGIN
+    DECLARE v_current_enrollment INT;
+    DECLARE v_max_enrollment INT;
+    
+    SELECT co.current_enrollment, c.max_enrollment 
+    INTO v_current_enrollment, v_max_enrollment
+    FROM course_offerings co
+    JOIN courses c ON co.course_id = c.course_id
+    WHERE co.offering_id = p_offering_id;
+    
+    IF v_current_enrollment >= v_max_enrollment THEN
+        SET p_status = 'Course is full';
+    ELSE
+        INSERT INTO enrollments (student_id, offering_id, enrollment_date)
+        VALUES (p_student_id, p_offering_id, CURDATE());
+        SET p_status = 'Successfully enrolled';
+    END IF;
+END //
+DELIMITER ;</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- Python Modal -->
+    <div id="pythonModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('pythonModal')">&times;</span>
+            <h2>Healthcare Data Analyzer - Python</h2>
+            <p>Complete Python application for healthcare data analysis</p>
+            
+            <div class="code-viewer">
+                <div class="code-header">
+                    <span>healthcare_analyzer.py</span>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
                 </div>
+                <pre><code>import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from datetime import datetime
+
+class HealthcareAnalyzer:
+    def __init__(self):
+        self.patient_data = None
+        self.analysis_results = {}
+    
+    def load_data(self, filepath):
+        """Load patient data from CSV file"""
+        try:
+            self.patient_data = pd.read_csv(filepath)
+            print(f"Loaded {len(self.patient_data)} patient records")
+            return True
+        except Exception as e:
+            print(f"Error loading data: {e}")
+            return False
+    
+    def analyze_patient_risk(self):
+        """Analyze patient risk factors"""
+        if self.patient_data is None:
+            print("No data loaded")
+            return
+        
+        risk_scores = []
+        
+        for _, patient in self.patient_data.iterrows():
+            score = 0
+            
+            # Age factor
+            if patient.get('age', 0) > 65:
+                score += 3
+            elif patient.get('age', 0) > 45:
+                score += 2
+            
+            # Blood pressure
+            if patient.get('blood_pressure', 0) > 140:
+                score += 3
+            elif patient.get('blood_pressure', 0) > 120:
+                score += 2
+            
+            # Cholesterol
+            if patient.get('cholesterol', 0) > 240:
+                score += 3
+            elif patient.get('cholesterol', 0) > 200:
+                score += 2
+            
+            # BMI
+            bmi = patient.get('bmi', 0)
+            if bmi > 30:
+                score += 3
+            elif bmi > 25:
+                score += 2
+            
+            risk_scores.append(score)
+        
+        self.patient_data['risk_score'] = risk_scores
+        self.patient_data['risk_level'] = pd.cut(
+            risk_scores,
+            bins=[-1, 3, 6, 10, 20],
+            labels=['Low', 'Medium', 'High', 'Critical']
+        )
+        
+        return self.patient_data['risk_level'].value_counts()
+    
+    def generate_health_trends(self):
+        """Generate health trend analysis"""
+        if self.patient_data is None:
+            print("No data loaded")
+            return
+        
+        trends = {
+            'average_age': self.patient_data['age'].mean(),
+            'average_bmi': self.patient_data['bmi'].mean(),
+            'high_blood_pressure_pct': (self.patient_data['blood_pressure'] > 140).mean() * 100,
+            'high_cholesterol_pct': (self.patient_data['cholesterol'] > 240).mean() * 100,
+            'obesity_pct': (self.patient_data['bmi'] > 30).mean() * 100
+        }
+        
+        return trends
+    
+    def create_visualizations(self):
+        """Create data visualizations"""
+        if self.patient_data is None:
+            print("No data loaded")
+            return
+        
+        fig, axes = plt.subplots(2, 2, figsize=(12, 10))
+        
+        # Age distribution
+        axes[0, 0].hist(self.patient_data['age'], bins=20, color='skyblue')
+        axes[0, 0].set_title('Age Distribution')
+        
+        # BMI distribution
+        axes[0, 1].hist(self.patient_data['bmi'], bins=20, color='lightgreen')
+        axes[0, 1].set_title('BMI Distribution')
+        
+        # Risk levels
+        risk_counts = self.patient_data['risk_level'].value_counts()
+        axes[1, 0].bar(risk_counts.index, risk_counts.values, color='salmon')
+        axes[1, 0].set_title('Risk Level Distribution')
+        
+        # Blood pressure vs Age
+        axes[1, 1].scatter(
+            self.patient_data['age'],
+            self.patient_data['blood_pressure'],
+            alpha=0.5,
+            color='purple'
+        )
+        axes[1, 1].set_title('Blood Pressure vs Age')
+        
+        plt.tight_layout()
+        plt.savefig('healthcare_analysis.png')
+        plt.show()
+    
+    def export_results(self, filename='healthcare_results.csv'):
+        """Export analysis results to CSV"""
+        if self.patient_data is not None:
+            self.patient_data.to_csv(filename, index=False)
+            print(f"Results exported to {filename}")
+
+def main():
+    analyzer = HealthcareAnalyzer()
+    
+    # Load data
+    if analyzer.load_data('patient_data.csv'):
+        # Analyze risk
+        print("\n=== PATIENT RISK ANALYSIS ===")
+        risk_distribution = analyzer.analyze_patient_risk()
+        print(risk_distribution)
+        
+        # Generate trends
+        print("\n=== HEALTH TRENDS ===")
+        trends = analyzer.generate_health_trends()
+        for key, value in trends.items():
+            print(f"{key.replace('_', ' ').title()}: {value:.2f}")
+        
+        # Create visualizations
+        print("\nCreating visualizations...")
+        analyzer.create_visualizations()
+        
+        # Export results
+        analyzer.export_results()
+
+if __name__ == "__main__":
+    main()</code></pre>
             </div>
         </div>
     </div>
 
-    <!-- Healthcare Modal -->
-    <div id="healthcareModal" class="modal">
+    <!-- Java Modal -->
+    <div id="javaModal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeModal('healthcareModal')">&times;</span>
-            <h2>Healthcare Data Analysis System</h2>
-            <div class="tech-tags">
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">Pandas</span>
-                <span class="tech-tag">Data Analysis</span>
-            </div>
-            <div class="modal-body">
-                <h3>📋 Project Overview</h3>
-                <p>Developed a Python-based system for analyzing healthcare data, identifying patient risk factors, and generating actionable insights for healthcare providers.</p>
-                
-                <h3>🎯 Why I Built This</h3>
-                <p>Coming from a biology background, I wanted to bridge my scientific knowledge with data analysis skills to solve real healthcare challenges.</p>
-                
-                <h3>💡 What I Learned</h3>
-                <ul>
-                    <li>Data cleaning and preprocessing techniques</li>
-                    <li>Statistical analysis with pandas</li>
-                    <li>Data visualization best practices</li>
-                    <li>Working with healthcare datasets</li>
-                    <li>Translating data into actionable insights</li>
-                </ul>
+            <span class="close" onclick="closeModal('javaModal')">&times;</span>
+            <h2>Password Security Checker - Java</h2>
+            <p>Java application for analyzing password strength</p>
+            
+            <div class="code-viewer">
+                <div class="code-header">
+                    <span>PasswordChecker.java</span>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+                <pre><code>import java.util.Scanner;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+
+public class PasswordChecker {
+    private String password;
+    private int score;
+    private StringBuilder feedback;
+    
+    public PasswordChecker(String password) {
+        this.password = password;
+        this.score = 0;
+        this.feedback = new StringBuilder();
+    }
+    
+    public void analyzePassword() {
+        // Length check
+        if (password.length() >= 12) {
+            score += 3;
+            feedback.append("✓ Excellent length (12+ characters)\n");
+        } else if (password.length() >= 8) {
+            score += 2;
+            feedback.append("✓ Good length (8-11 characters)\n");
+        } else if (password.length() >= 6) {
+            score += 1;
+            feedback.append("⚠ Fair length (6-7 characters)\n");
+        } else {
+            feedback.append("✗ Too short (less than 6 characters)\n");
+        }
+        
+        // Uppercase letters
+        if (Pattern.compile("[A-Z]").matcher(password).find()) {
+            score += 2;
+            feedback.append("✓ Contains uppercase letters\n");
+        } else {
+            feedback.append("✗ No uppercase letters\n");
+        }
+        
+        // Lowercase letters
+        if (Pattern.compile("[a-z]").matcher(password).find()) {
+            score += 2;
+            feedback.append("✓ Contains lowercase letters\n");
+        } else {
+            feedback.append("✗ No lowercase letters\n");
+        }
+        
+        // Numbers
+        if (Pattern.compile("[0-9]").matcher(password).find()) {
+            score += 2;
+            feedback.append("✓ Contains numbers\n");
+        } else {
+            feedback.append("✗ No numbers\n");
+        }
+        
+        // Special characters
+        if (Pattern.compile("[^a-zA-Z0-9]").matcher(password).find()) {
+            score += 3;
+            feedback.append("✓ Contains special characters\n");
+        } else {
+            feedback.append("⚠ No special characters\n");
+        }
+        
+        // Common patterns check
+        if (Pattern.compile("(.)\\1{2,}").matcher(password).find()) {
+            score -= 2;
+            feedback.append("✗ Contains repeated characters\n");
+        }
+        
+        if (Pattern.compile("(123|abc|password|qwerty)").matcher(password.toLowerCase()).find()) {
+            score -= 3;
+            feedback.append("✗ Contains common patterns\n");
+        }
+        
+        // Clamp score between 0 and 12
+        score = Math.max(0, Math.min(12, score));
+    }
+    
+    public String getStrengthLevel() {
+        if (score >= 10) {
+            return "STRONG";
+        } else if (score >= 7) {
+            return "GOOD";
+        } else if (score >= 4) {
+            return "FAIR";
+        } else {
+            return "WEAK";
+        }
+    }
+    
+    public int getScore() {
+        return score;
+    }
+    
+    public String getFeedback() {
+        return feedback.toString();
+    }
+    
+    public String getRecommendations() {
+        StringBuilder recommendations = new StringBuilder();
+        
+        if (password.length() < 12) {
+            recommendations.append("• Use at least 12 characters\n");
+        }
+        if (!Pattern.compile("[A-Z]").matcher(password).find()) {
+            recommendations.append("• Add uppercase letters\n");
+        }
+        if (!Pattern.compile("[0-9]").matcher(password).find()) {
+            recommendations.append("• Add numbers\n");
+        }
+        if (!Pattern.compile("[^a-zA-Z0-9]").matcher(password).find()) {
+            recommendations.append("• Add special characters (!@#$%^&*)\n");
+        }
+        
+        return recommendations.toString();
+    }
+    
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("=== PASSWORD SECURITY CHECKER ===");
+        System.out.print("Enter password to check: ");
+        String password = scanner.nextLine();
+        
+        PasswordChecker checker = new PasswordChecker(password);
+        checker.analyzePassword();
+        
+        System.out.println("\n=== ANALYSIS RESULTS ===");
+        System.out.println("Password Length: " + password.length());
+        System.out.println("Security Score: " + checker.getScore() + "/12");
+        System.out.println("Strength Level: " + checker.getStrengthLevel());
+        
+        System.out.println("\n=== DETAILED FEEDBACK ===");
+        System.out.println(checker.getFeedback());
+        
+        if (checker.getScore() < 10) {
+            System.out.println("=== RECOMMENDATIONS ===");
+            System.out.println(checker.getRecommendations());
+        }
+        
+        scanner.close();
+    }
+}</code></pre>
             </div>
         </div>
     </div>
 
-    <!-- Cybersecurity Modal -->
-    <div id="cyberModal" class="modal">
+    <!-- Cloud Modal -->
+    <div id="cloudModal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeModal('cyberModal')">&times;</span>
-            <h2>Login Security Monitoring System</h2>
-            <div class="tech-tags">
-                <span class="tech-tag">Java</span>
-                <span class="tech-tag">Security</span>
-            </div>
-            <div class="modal-body">
-                <h3>📋 Project Overview</h3>
-                <p>Created a Java application that monitors login attempts and identifies potential security threats through pattern recognition.</p>
-                
-                <h3>💡 What I Learned</h3>
-                <ul>
-                    <li>Java OOP principles</li>
-                    <li>Security best practices</li>
-                    <li>Pattern recognition algorithms</li>
-                </ul>
+            <span class="close" onclick="closeModal('cloudModal')">&times;</span>
+            <h2>AWS Cloud Architecture</h2>
+            <p>Cloud infrastructure design for scalable web application</p>
+            
+            <div class="code-viewer">
+                <div class="code-header">
+                    <span>cloud-architecture.yaml</span>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+                <pre><code># AWS CloudFormation Template
+# Scalable Web Application Architecture
+
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'Scalable Web Application with Auto Scaling'
+
+Resources:
+  # VPC
+  MyVPC:
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: 10.0.0.0/16
+      EnableDnsHostnames: true
+      Tags:
+        - Key: Name
+          Value: WebApp-VPC
+
+  # Public Subnet
+  PublicSubnet:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref MyVPC
+      CidrBlock: 10.0.1.0/24
+      AvailabilityZone: !Select [0, !GetAZs '']
+      MapPublicIpOnLaunch: true
+
+  # Security Group
+  WebSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Allow HTTP and SSH
+      VpcId: !Ref MyVPC
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 443
+          ToPort: 443
+          CidrIp: 0.0.0.0/0
+
+  # Launch Configuration
+  WebLaunchConfig:
+    Type: AWS::AutoScaling::LaunchConfiguration
+    Properties:
+      ImageId: ami-0c55b159cbfafe1f0
+      InstanceType: t2.micro
+      SecurityGroups:
+        - !Ref WebSecurityGroup
+      UserData:
+        Fn::Base64: !Sub |
+          #!/bin/bash
+          yum update -y
+          yum install -y httpd
+          systemctl start httpd
+          systemctl enable httpd
+          echo "<h1>Welcome to My Cloud Application</h1>" > /var/www/html/index.html
+
+  # Auto Scaling Group
+  WebAutoScalingGroup:
+    Type: AWS::AutoScaling::AutoScalingGroup
+    Properties:
+      LaunchConfigurationName: !Ref WebLaunchConfig
+      VPCZoneIdentifier:
+        - !Ref PublicSubnet
+      MinSize: 2
+      MaxSize: 5
+      DesiredCapacity: 2
+      TargetGroupARNs:
+        - !Ref WebTargetGroup
+
+  # Load Balancer
+  WebLoadBalancer:
+    Type: AWS::ElasticLoadBalancingV2::LoadBalancer
+    Properties:
+      Subnets:
+        - !Ref PublicSubnet
+      SecurityGroups:
+        - !Ref WebSecurityGroup
+
+  # Target Group
+  WebTargetGroup:
+    Type: AWS::ElasticLoadBalancingV2::TargetGroup
+    Properties:
+      VpcId: !Ref MyVPC
+      Port: 80
+      Protocol: HTTP
+      HealthCheckPath: /
+      HealthCheckIntervalSeconds: 30
+      HealthyThresholdCount: 2
+      UnhealthyThresholdCount: 5
+
+  # Listener
+  WebListener:
+    Type: AWS::ElasticLoadBalancingV2::Listener
+    Properties:
+      LoadBalancerArn: !Ref WebLoadBalancer
+      Port: 80
+      Protocol: HTTP
+      DefaultActions:
+        - Type: forward
+          TargetGroupArn: !Ref WebTargetGroup
+
+Outputs:
+  LoadBalancerDNS:
+    Description: 'DNS name of the load balancer'
+    Value: !GetAtt WebLoadBalancer.DNSName</code></pre>
             </div>
         </div>
     </div>
 
-    <!-- Grade Calculator Modal -->
-    <div id="gradeCalcModal" class="modal">
+    <!-- Security Modal -->
+    <div id="securityModal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeModal('gradeCalcModal')">&times;</span>
-            <h2>Student Grade Calculator</h2>
-            <div class="tech-tags">
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">Tkinter</span>
-            </div>
-            <div class="modal-body">
-                <h3>📋 Project Overview</h3>
-                <p>Built a Python GUI application that helps students calculate their grades and track their academic progress.</p>
+            <span class="close" onclick="closeModal('securityModal')">&times;</span>
+            <h2>Network Security Scanner - Python</h2>
+            <p>Python tool for network scanning and security analysis</p>
+            
+            <div class="code-viewer">
+                <div class="code-header">
+                    <span>security_scanner.py</span>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+                <pre><code>import socket
+import subprocess
+import sys
+from datetime import datetime
+import ipaddress
+
+class NetworkSecurityScanner:
+    def __init__(self):
+        self.results = []
+    
+    def scan_port(self, host, port):
+        """Scan a single port on a host"""
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        sock.settimeout(1)
+        
+        try:
+            result = sock.connect_ex((host, port))
+            if result == 0:
+                return True
+            else:
+                return False
+        except socket.error:
+            return False
+        finally:
+            sock.close()
+    
+    def scan_ports(self, host, start_port=1, end_port=1024):
+        """Scan a range of ports on a host"""
+        print(f"\nScanning {host} (ports {start_port}-{end_port})")
+        print("=" * 50)
+        
+        open_ports = []
+        
+        for port in range(start_port, end_port + 1):
+            if self.scan_port(host, port):
+                service = self.get_service_name(port)
+                print(f"Port {port}: OPEN - {service}")
+                open_ports.append({
+                    'port': port,
+                    'service': service,
+                    'status': 'open'
+                })
+        
+        return open_ports
+    
+    def get_service_name(self, port):
+        """Get service name for common ports"""
+        common_ports = {
+            20: 'FTP-Data',
+            21: 'FTP',
+            22: 'SSH',
+            23: 'Telnet',
+            25: 'SMTP',
+            53: 'DNS',
+            80: 'HTTP',
+            110: 'POP3',
+            143: 'IMAP',
+            443: 'HTTPS',
+            3306: 'MySQL',
+            3389: 'RDP',
+            5432: 'PostgreSQL',
+            8080: 'HTTP-Proxy'
+        }
+        return common_ports.get(port, 'Unknown')
+    
+    def scan_network(self, network):
+        """Scan entire network for active hosts"""
+        print(f"\nScanning network: {network}")
+        print("=" * 50)
+        
+        active_hosts = []
+        
+        try:
+            # Ping sweep
+            for ip in ipaddress.IPv4Network(network):
+                ip_str = str(ip)
+                if self.ping_host(ip_str):
+                    print(f"Host active: {ip_str}")
+                    active_hosts.append(ip_str)
+        except ValueError as e:
+            print(f"Invalid network: {e}")
+        
+        return active_hosts
+    
+    def ping_host(self, host):
+        """Ping a host to check if it's active"""
+        try:
+            if sys.platform == "win32":
+                result = subprocess.run(
+                    ['ping', '-n', '1', '-w', '1000', host],
+                    capture_output=True,
+                    text=True
+                )
+            else:
+                result = subprocess.run(
+                    ['ping', '-c', '1', '-W', '1', host],
+                    capture_output=True,
+                    text=True
+                )
+            
+            return result.returncode == 0
+        except Exception:
+            return False
+    
+    def analyze_security(self, open_ports):
+        """Analyze security implications of open ports"""
+        print("\n=== SECURITY ANALYSIS ===")
+        print("=" * 50)
+        
+        security_issues = []
+        
+        for port_info in open_ports:
+            port = port_info['port']
+            service = port_info['service']
+            
+            if port in [21, 23, 3389]:
+                security_issues.append(f"⚠ {service} (Port {port}) - Insecure protocol, consider disabling")
+            elif port in [80, 8080]:
+                security_issues.append(f"⚠ {service} (Port {port}) - Ensure HTTPS is configured")
+            elif port == 3306:
+                security_issues.append(f"⚠ MySQL (Port {port}) - Database should not be publicly accessible")
+            elif port == 22:
+                security_issues.append(f"ℹ SSH (Port {port}) - Ensure key-based authentication")
+        
+        if security_issues:
+            for issue in security_issues:
+                print(issue)
+        else:
+            print("✓ No critical security issues found")
+        
+        return security_issues
+    
+    def generate_report(self, host, open_ports):
+        """Generate security report"""
+        report = {
+            'timestamp': datetime.now().isoformat(),
+            'target': host,
+            'open_ports': open_ports,
+            'total_open_ports': len(open_ports)
+        }
+        
+        return report
+
+def main():
+    scanner = NetworkSecurityScanner()
+    
+    print("=== NETWORK SECURITY SCANNER ===")
+    print("This tool is for educational purposes only")
+    print("Always get permission before scanning networks\n")
+    
+    while True:
+        print("\nOptions:")
+        print("1. Scan a single host")
+        print("2. Scan a network range")
+        print("3. Exit")
+        
+        choice = input("\nEnter choice: ")
+        
+        if choice == '1':
+            host = input("Enter host to scan (e.g., localhost): ")
+            try:
+                start_port = int(input("Enter start port (default 1): ") or "1")
+                end_port = int(input("Enter end port (default 1024): ") or "1024")
                 
-                <h3>💡 What I Learned</h3>
-                <ul>
-                    <li>GUI development with Tkinter</li>
-                    <li>Python functions and modules</li>
-                    <li>User input validation</li>
-                </ul>
+                open_ports = scanner.scan_ports(host, start_port, end_port)
+                
+                if open_ports:
+                    scanner.analyze_security(open_ports)
+                    report = scanner.generate_report(host, open_ports)
+                    print(f"\nTotal open ports: {report['total_open_ports']}")
+                else:
+                    print("\nNo open ports found")
+                    
+            except ValueError:
+                print("Invalid port number")
+        
+        elif choice == '2':
+            network = input("Enter network (e.g., 192.168.1.0/24): ")
+            active_hosts = scanner.scan_network(network)
+            print(f"\nFound {len(active_hosts)} active hosts")
+        
+        elif choice == '3':
+            print("\nGoodbye!")
+            break
+        
+        else:
+            print("Invalid choice")
+
+if __name__ == "__main__":
+    main()</code></pre>
             </div>
         </div>
     </div>
 
-    <!-- Finance Tracker Modal -->
-    <div id="financeModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('financeModal')">&times;</span>
-            <h2>Personal Finance Tracker</h2>
-            <div class="tech-tags">
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">Excel</span>
-            </div>
-            <div class="modal-body">
-                <h3>📋 Project Overview</h3>
-                <p>Developed a Python script that tracks personal expenses and generates monthly financial reports.</p>
-                
-                <h3>💡 What I Learned</h3>
-                <ul>
-                    <li>File handling in Python</li>
-                    <li>Data organization</li>
-                    <li>Excel automation</li>
-                </ul>
+    <footer style="background: rgba(10, 10, 26, 0.95); border-top: 1px solid rgba(255, 255, 255, 0.1); padding: 2rem 0; text-align: center;">
+        <div class="container">
+            <p style="color: #94a3b8;">© 2024 Gomolemo Chenepe. Built with passion and continuous learning.</p>
+            <div style="display: flex; gap: 2rem; justify-content: center; margin-top: 1rem;">
+                <a href="#home" style="color: #cbd5e1;">Home</a>
+                <a href="#projects" style="color: #cbd5e1;">Projects</a>
+                <a href="#contact" style="color: #cbd5e1;">Contact</a>
             </div>
         </div>
-    </div>
-
-    <!-- COVID Dashboard Modal -->
-    <div id="covidModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('covidModal')">&times;</span>
-            <h2>COVID-19 Data Visualization Dashboard</h2>
-            <div class="tech-tags">
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">Matplotlib</span>
-                <span class="tech-tag">Data Viz</span>
-            </div>
-            <div class="modal-body">
-                <h3>📋 Project Overview</h3>
-                <p>Created interactive visualizations analyzing COVID-19 trends using public datasets.</p>
-                
-                <h3>💡 What I Learned</h3>
-                <ul>
-                    <li>Working with real-world datasets</li>
-                    <li>Data visualization techniques</li>
-                    <li>Statistical analysis</li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    </footer>
 
     <script>
-        // ============ MOBILE MENU TOGGLE ============
+        // Mobile menu toggle
         function toggleMenu() {
             const navLinks = document.getElementById('navLinks');
             navLinks.classList.toggle('active');
@@ -1579,16 +1534,14 @@
             });
         });
 
-        // ============ MODAL FUNCTIONALITY ============
+        // Modal functions
         function openModal(modalId) {
-            const modal = document.getElementById(modalId);
-            modal.style.display = 'block';
+            document.getElementById(modalId).style.display = 'block';
             document.body.style.overflow = 'hidden';
         }
 
         function closeModal(modalId) {
-            const modal = document.getElementById(modalId);
-            modal.style.display = 'none';
+            document.getElementById(modalId).style.display = 'none';
             document.body.style.overflow = 'auto';
         }
 
@@ -1610,36 +1563,35 @@
             }
         });
 
-        // ============ SMOOTH SCROLL ============
+        // Copy code function
+        function copyCode(button) {
+            const codeBlock = button.closest('.code-viewer').querySelector('code');
+            const textArea = document.createElement('textarea');
+            textArea.value = codeBlock.textContent;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+            
+            button.textContent = 'Copied!';
+            setTimeout(() => {
+                button.textContent = 'Copy Code';
+            }, 2000);
+        }
+
+        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    target.scrollIntoView({ behavior: 'smooth' });
                 }
             });
         });
 
-        // ============ SCROLL PROGRESS BAR ============
-        window.addEventListener('scroll', () => {
-            const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-            document.getElementById('progressBar').style.width = scrollPercent + '%';
-            
-            // Navbar background change
-            const nav = document.getElementById('navbar');
-            if (window.scrollY > 100) {
-                nav.classList.add('scrolled');
-            } else {
-                nav.classList.remove('scrolled');
-            }
-        });
-
-        // ============ TYPING EFFECT ============
-        const heroText = "Turning science, data and code into meaningful solutions.";
+        // Typing effect
+        const heroText = "Building solutions with Python, Java, MySQL, Cloud & Security";
         const heroElement = document.getElementById('typing-text');
         let charIndex = 0;
 
@@ -1651,32 +1603,8 @@
             }
         }
 
-        // Start typing effect when page loads
         window.addEventListener('load', () => {
             setTimeout(typeWriter, 1000);
-        });
-
-        // ============ SCROLL ANIMATIONS ============
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe all cards and sections for animation
-        document.querySelectorAll('.project-card, .skill-card, .cert-card, .mini-card, .journey-item').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
         });
     </script>
 </body>
