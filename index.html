@@ -538,11 +538,23 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
+        <!-- Skills Section -->
     <section id="skills">
         <div class="container">
             <h2 class="section-title"><span>✦</span> Technical Skills</h2>
             <div class="skills-row">
+                <div class="skill-card">
+                    <div class="skill-emoji">🌐</div>
+                    <h3>HTML5</h3>
+                    <p>Semantic markup, forms, accessibility</p>
+                    <span class="skill-level">Intermediate</span>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-emoji">🎨</div>
+                    <h3>CSS3</h3>
+                    <p>Flexbox, Grid, animations, responsive design</p>
+                    <span class="skill-level">Intermediate</span>
+                </div>
                 <div class="skill-card">
                     <div class="skill-emoji">🐍</div>
                     <h3>Python</h3>
@@ -614,9 +626,10 @@
                         <div class="project-tags">
                             <span>Python</span>
                             <span>Data Analysis</span>
+                            <span style="background: #10b98120; color: #10b981;">🔴 Live</span>
                         </div>
                         <h3>Healthcare Data Analyzer</h3>
-                        <p>Python application for analyzing patient data and generating health insights.</p>
+                        <p>Interactive web app for analyzing patient health data.</p>
                     </div>
                 </div>
 
@@ -857,13 +870,44 @@ DELIMITER ;</code></pre>
         </div>
     </div>
 
-    <!-- Python Modal -->
+    <!-- Python Modal - UPDATED with Live Demo, Screenshot & Improvements -->
     <div id="pythonModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('pythonModal')">&times;</span>
             <h2>Healthcare Data Analyzer - Python</h2>
-            <p>Complete Python application for healthcare data analysis</p>
+            <p>Interactive web app for analyzing patient health data</p>
             
+            <!-- 🔴 LIVE DEMO BUTTONS -->
+            <div style="display: flex; gap: 1rem; margin: 1.5rem 0; flex-wrap: wrap;">
+                <a href="https://7c3ff740-f8c4-4b30-ae43-766fd98101e0-00-1g70k1fdu4pxc.reed.replit.dev" target="_blank" class="btn btn-primary" style="background: linear-gradient(135deg, #10b981, #059669); padding: 0.8rem 2rem;">
+                    <i class="fas fa-play-circle"></i> 🔴 Try Live Demo
+                </a>
+                <a href="#" class="btn btn-outline">
+                    <i class="fab fa-github"></i> View Source
+                </a>
+            </div>
+            
+            <!-- 📸 SCREENSHOT -->
+            <div style="background: #1a1a3e; border-radius: 1rem; padding: 1rem; margin-bottom: 1.5rem; border: 1px solid rgba(255,255,255,0.1);">
+                <img src="https://i.postimg.cc/XqZSX4kw/Screenshot-2026-08-30-at-15-33-32.png" alt="Healthcare Analyzer Dashboard" style="max-width: 100%; border-radius: 0.5rem;">
+                <p style="color: #94a3b8; font-size: 0.9rem; text-align: center; margin-top: 0.5rem;">
+                    ⬆️ Live dashboard analyzing patient health data
+                </p>
+            </div>
+            
+            <!-- 💡 WHAT COULD BE IMPROVED -->
+            <div style="background: rgba(236, 72, 153, 0.1); border-left: 4px solid #ec4899; border-radius: 0.5rem; padding: 1rem 1.5rem; margin-bottom: 1.5rem;">
+                <h4 style="color: #ec4899; margin-bottom: 0.5rem;">💡 What Could Be Improved</h4>
+                <ul style="color: #94a3b8; list-style: none; padding: 0; font-size: 0.95rem;">
+                    <li style="margin-bottom: 0.3rem;">✓ <strong>Real-time data:</strong> Connect to a live API or database instead of sample data</li>
+                    <li style="margin-bottom: 0.3rem;">✓ <strong>ML integration:</strong> Add predictive models for patient risk forecasting</li>
+                    <li style="margin-bottom: 0.3rem;">✓ <strong>Export reports:</strong> Generate PDF reports for individual patients</li>
+                    <li style="margin-bottom: 0.3rem;">✓ <strong>User authentication:</strong> Secure access for healthcare professionals</li>
+                    <li style="margin-bottom: 0.3rem;">✓ <strong>Mobile responsive:</strong> Optimize for tablets and mobile devices</li>
+                </ul>
+            </div>
+            
+            <!-- 💻 SOURCE CODE -->
             <div class="code-viewer">
                 <div class="code-header">
                     <span>healthcare_analyzer.py</span>
@@ -984,628 +1028,4 @@ class HealthcareAnalyzer:
         
         plt.tight_layout()
         plt.savefig('healthcare_analysis.png')
-        plt.show()
-    
-    def export_results(self, filename='healthcare_results.csv'):
-        """Export analysis results to CSV"""
-        if self.patient_data is not None:
-            self.patient_data.to_csv(filename, index=False)
-            print(f"Results exported to {filename}")
-
-def main():
-    analyzer = HealthcareAnalyzer()
-    
-    # Load data
-    if analyzer.load_data('patient_data.csv'):
-        # Analyze risk
-        print("\n=== PATIENT RISK ANALYSIS ===")
-        risk_distribution = analyzer.analyze_patient_risk()
-        print(risk_distribution)
-        
-        # Generate trends
-        print("\n=== HEALTH TRENDS ===")
-        trends = analyzer.generate_health_trends()
-        for key, value in trends.items():
-            print(f"{key.replace('_', ' ').title()}: {value:.2f}")
-        
-        # Create visualizations
-        print("\nCreating visualizations...")
-        analyzer.create_visualizations()
-        
-        # Export results
-        analyzer.export_results()
-
-if __name__ == "__main__":
-    main()</code></pre>
-            </div>
-        </div>
-    </div>
-
-    <!-- Java Modal -->
-    <div id="javaModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('javaModal')">&times;</span>
-            <h2>Password Security Checker - Java</h2>
-            <p>Java application for analyzing password strength</p>
-            
-            <div class="code-viewer">
-                <div class="code-header">
-                    <span>PasswordChecker.java</span>
-                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
-                </div>
-                <pre><code>import java.util.Scanner;
-import java.util.regex.Pattern;
-import java.util.regex.Matcher;
-
-public class PasswordChecker {
-    private String password;
-    private int score;
-    private StringBuilder feedback;
-    
-    public PasswordChecker(String password) {
-        this.password = password;
-        this.score = 0;
-        this.feedback = new StringBuilder();
-    }
-    
-    public void analyzePassword() {
-        // Length check
-        if (password.length() >= 12) {
-            score += 3;
-            feedback.append("✓ Excellent length (12+ characters)\n");
-        } else if (password.length() >= 8) {
-            score += 2;
-            feedback.append("✓ Good length (8-11 characters)\n");
-        } else if (password.length() >= 6) {
-            score += 1;
-            feedback.append("⚠ Fair length (6-7 characters)\n");
-        } else {
-            feedback.append("✗ Too short (less than 6 characters)\n");
-        }
-        
-        // Uppercase letters
-        if (Pattern.compile("[A-Z]").matcher(password).find()) {
-            score += 2;
-            feedback.append("✓ Contains uppercase letters\n");
-        } else {
-            feedback.append("✗ No uppercase letters\n");
-        }
-        
-        // Lowercase letters
-        if (Pattern.compile("[a-z]").matcher(password).find()) {
-            score += 2;
-            feedback.append("✓ Contains lowercase letters\n");
-        } else {
-            feedback.append("✗ No lowercase letters\n");
-        }
-        
-        // Numbers
-        if (Pattern.compile("[0-9]").matcher(password).find()) {
-            score += 2;
-            feedback.append("✓ Contains numbers\n");
-        } else {
-            feedback.append("✗ No numbers\n");
-        }
-        
-        // Special characters
-        if (Pattern.compile("[^a-zA-Z0-9]").matcher(password).find()) {
-            score += 3;
-            feedback.append("✓ Contains special characters\n");
-        } else {
-            feedback.append("⚠ No special characters\n");
-        }
-        
-        // Common patterns check
-        if (Pattern.compile("(.)\\1{2,}").matcher(password).find()) {
-            score -= 2;
-            feedback.append("✗ Contains repeated characters\n");
-        }
-        
-        if (Pattern.compile("(123|abc|password|qwerty)").matcher(password.toLowerCase()).find()) {
-            score -= 3;
-            feedback.append("✗ Contains common patterns\n");
-        }
-        
-        // Clamp score between 0 and 12
-        score = Math.max(0, Math.min(12, score));
-    }
-    
-    public String getStrengthLevel() {
-        if (score >= 10) {
-            return "STRONG";
-        } else if (score >= 7) {
-            return "GOOD";
-        } else if (score >= 4) {
-            return "FAIR";
-        } else {
-            return "WEAK";
-        }
-    }
-    
-    public int getScore() {
-        return score;
-    }
-    
-    public String getFeedback() {
-        return feedback.toString();
-    }
-    
-    public String getRecommendations() {
-        StringBuilder recommendations = new StringBuilder();
-        
-        if (password.length() < 12) {
-            recommendations.append("• Use at least 12 characters\n");
-        }
-        if (!Pattern.compile("[A-Z]").matcher(password).find()) {
-            recommendations.append("• Add uppercase letters\n");
-        }
-        if (!Pattern.compile("[0-9]").matcher(password).find()) {
-            recommendations.append("• Add numbers\n");
-        }
-        if (!Pattern.compile("[^a-zA-Z0-9]").matcher(password).find()) {
-            recommendations.append("• Add special characters (!@#$%^&*)\n");
-        }
-        
-        return recommendations.toString();
-    }
-    
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        
-        System.out.println("=== PASSWORD SECURITY CHECKER ===");
-        System.out.print("Enter password to check: ");
-        String password = scanner.nextLine();
-        
-        PasswordChecker checker = new PasswordChecker(password);
-        checker.analyzePassword();
-        
-        System.out.println("\n=== ANALYSIS RESULTS ===");
-        System.out.println("Password Length: " + password.length());
-        System.out.println("Security Score: " + checker.getScore() + "/12");
-        System.out.println("Strength Level: " + checker.getStrengthLevel());
-        
-        System.out.println("\n=== DETAILED FEEDBACK ===");
-        System.out.println(checker.getFeedback());
-        
-        if (checker.getScore() < 10) {
-            System.out.println("=== RECOMMENDATIONS ===");
-            System.out.println(checker.getRecommendations());
-        }
-        
-        scanner.close();
-    }
-}</code></pre>
-            </div>
-        </div>
-    </div>
-
-    <!-- Cloud Modal -->
-    <div id="cloudModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('cloudModal')">&times;</span>
-            <h2>AWS Cloud Architecture</h2>
-            <p>Cloud infrastructure design for scalable web application</p>
-            
-            <div class="code-viewer">
-                <div class="code-header">
-                    <span>cloud-architecture.yaml</span>
-                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
-                </div>
-                <pre><code># AWS CloudFormation Template
-# Scalable Web Application Architecture
-
-AWSTemplateFormatVersion: '2010-09-09'
-Description: 'Scalable Web Application with Auto Scaling'
-
-Resources:
-  # VPC
-  MyVPC:
-    Type: AWS::EC2::VPC
-    Properties:
-      CidrBlock: 10.0.0.0/16
-      EnableDnsHostnames: true
-      Tags:
-        - Key: Name
-          Value: WebApp-VPC
-
-  # Public Subnet
-  PublicSubnet:
-    Type: AWS::EC2::Subnet
-    Properties:
-      VpcId: !Ref MyVPC
-      CidrBlock: 10.0.1.0/24
-      AvailabilityZone: !Select [0, !GetAZs '']
-      MapPublicIpOnLaunch: true
-
-  # Security Group
-  WebSecurityGroup:
-    Type: AWS::EC2::SecurityGroup
-    Properties:
-      GroupDescription: Allow HTTP and SSH
-      VpcId: !Ref MyVPC
-      SecurityGroupIngress:
-        - IpProtocol: tcp
-          FromPort: 80
-          ToPort: 80
-          CidrIp: 0.0.0.0/0
-        - IpProtocol: tcp
-          FromPort: 443
-          ToPort: 443
-          CidrIp: 0.0.0.0/0
-
-  # Launch Configuration
-  WebLaunchConfig:
-    Type: AWS::AutoScaling::LaunchConfiguration
-    Properties:
-      ImageId: ami-0c55b159cbfafe1f0
-      InstanceType: t2.micro
-      SecurityGroups:
-        - !Ref WebSecurityGroup
-      UserData:
-        Fn::Base64: !Sub |
-          #!/bin/bash
-          yum update -y
-          yum install -y httpd
-          systemctl start httpd
-          systemctl enable httpd
-          echo "<h1>Welcome to My Cloud Application</h1>" > /var/www/html/index.html
-
-  # Auto Scaling Group
-  WebAutoScalingGroup:
-    Type: AWS::AutoScaling::AutoScalingGroup
-    Properties:
-      LaunchConfigurationName: !Ref WebLaunchConfig
-      VPCZoneIdentifier:
-        - !Ref PublicSubnet
-      MinSize: 2
-      MaxSize: 5
-      DesiredCapacity: 2
-      TargetGroupARNs:
-        - !Ref WebTargetGroup
-
-  # Load Balancer
-  WebLoadBalancer:
-    Type: AWS::ElasticLoadBalancingV2::LoadBalancer
-    Properties:
-      Subnets:
-        - !Ref PublicSubnet
-      SecurityGroups:
-        - !Ref WebSecurityGroup
-
-  # Target Group
-  WebTargetGroup:
-    Type: AWS::ElasticLoadBalancingV2::TargetGroup
-    Properties:
-      VpcId: !Ref MyVPC
-      Port: 80
-      Protocol: HTTP
-      HealthCheckPath: /
-      HealthCheckIntervalSeconds: 30
-      HealthyThresholdCount: 2
-      UnhealthyThresholdCount: 5
-
-  # Listener
-  WebListener:
-    Type: AWS::ElasticLoadBalancingV2::Listener
-    Properties:
-      LoadBalancerArn: !Ref WebLoadBalancer
-      Port: 80
-      Protocol: HTTP
-      DefaultActions:
-        - Type: forward
-          TargetGroupArn: !Ref WebTargetGroup
-
-Outputs:
-  LoadBalancerDNS:
-    Description: 'DNS name of the load balancer'
-    Value: !GetAtt WebLoadBalancer.DNSName</code></pre>
-            </div>
-        </div>
-    </div>
-
-    <!-- Security Modal -->
-    <div id="securityModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('securityModal')">&times;</span>
-            <h2>Network Security Scanner - Python</h2>
-            <p>Python tool for network scanning and security analysis</p>
-            
-            <div class="code-viewer">
-                <div class="code-header">
-                    <span>security_scanner.py</span>
-                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
-                </div>
-                <pre><code>import socket
-import subprocess
-import sys
-from datetime import datetime
-import ipaddress
-
-class NetworkSecurityScanner:
-    def __init__(self):
-        self.results = []
-    
-    def scan_port(self, host, port):
-        """Scan a single port on a host"""
-        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        sock.settimeout(1)
-        
-        try:
-            result = sock.connect_ex((host, port))
-            if result == 0:
-                return True
-            else:
-                return False
-        except socket.error:
-            return False
-        finally:
-            sock.close()
-    
-    def scan_ports(self, host, start_port=1, end_port=1024):
-        """Scan a range of ports on a host"""
-        print(f"\nScanning {host} (ports {start_port}-{end_port})")
-        print("=" * 50)
-        
-        open_ports = []
-        
-        for port in range(start_port, end_port + 1):
-            if self.scan_port(host, port):
-                service = self.get_service_name(port)
-                print(f"Port {port}: OPEN - {service}")
-                open_ports.append({
-                    'port': port,
-                    'service': service,
-                    'status': 'open'
-                })
-        
-        return open_ports
-    
-    def get_service_name(self, port):
-        """Get service name for common ports"""
-        common_ports = {
-            20: 'FTP-Data',
-            21: 'FTP',
-            22: 'SSH',
-            23: 'Telnet',
-            25: 'SMTP',
-            53: 'DNS',
-            80: 'HTTP',
-            110: 'POP3',
-            143: 'IMAP',
-            443: 'HTTPS',
-            3306: 'MySQL',
-            3389: 'RDP',
-            5432: 'PostgreSQL',
-            8080: 'HTTP-Proxy'
-        }
-        return common_ports.get(port, 'Unknown')
-    
-    def scan_network(self, network):
-        """Scan entire network for active hosts"""
-        print(f"\nScanning network: {network}")
-        print("=" * 50)
-        
-        active_hosts = []
-        
-        try:
-            # Ping sweep
-            for ip in ipaddress.IPv4Network(network):
-                ip_str = str(ip)
-                if self.ping_host(ip_str):
-                    print(f"Host active: {ip_str}")
-                    active_hosts.append(ip_str)
-        except ValueError as e:
-            print(f"Invalid network: {e}")
-        
-        return active_hosts
-    
-    def ping_host(self, host):
-        """Ping a host to check if it's active"""
-        try:
-            if sys.platform == "win32":
-                result = subprocess.run(
-                    ['ping', '-n', '1', '-w', '1000', host],
-                    capture_output=True,
-                    text=True
-                )
-            else:
-                result = subprocess.run(
-                    ['ping', '-c', '1', '-W', '1', host],
-                    capture_output=True,
-                    text=True
-                )
-            
-            return result.returncode == 0
-        except Exception:
-            return False
-    
-    def analyze_security(self, open_ports):
-        """Analyze security implications of open ports"""
-        print("\n=== SECURITY ANALYSIS ===")
-        print("=" * 50)
-        
-        security_issues = []
-        
-        for port_info in open_ports:
-            port = port_info['port']
-            service = port_info['service']
-            
-            if port in [21, 23, 3389]:
-                security_issues.append(f"⚠ {service} (Port {port}) - Insecure protocol, consider disabling")
-            elif port in [80, 8080]:
-                security_issues.append(f"⚠ {service} (Port {port}) - Ensure HTTPS is configured")
-            elif port == 3306:
-                security_issues.append(f"⚠ MySQL (Port {port}) - Database should not be publicly accessible")
-            elif port == 22:
-                security_issues.append(f"ℹ SSH (Port {port}) - Ensure key-based authentication")
-        
-        if security_issues:
-            for issue in security_issues:
-                print(issue)
-        else:
-            print("✓ No critical security issues found")
-        
-        return security_issues
-    
-    def generate_report(self, host, open_ports):
-        """Generate security report"""
-        report = {
-            'timestamp': datetime.now().isoformat(),
-            'target': host,
-            'open_ports': open_ports,
-            'total_open_ports': len(open_ports)
-        }
-        
-        return report
-
-def main():
-    scanner = NetworkSecurityScanner()
-    
-    print("=== NETWORK SECURITY SCANNER ===")
-    print("This tool is for educational purposes only")
-    print("Always get permission before scanning networks\n")
-    
-    while True:
-        print("\nOptions:")
-        print("1. Scan a single host")
-        print("2. Scan a network range")
-        print("3. Exit")
-        
-        choice = input("\nEnter choice: ")
-        
-        if choice == '1':
-            host = input("Enter host to scan (e.g., localhost): ")
-            try:
-                start_port = int(input("Enter start port (default 1): ") or "1")
-                end_port = int(input("Enter end port (default 1024): ") or "1024")
-                
-                open_ports = scanner.scan_ports(host, start_port, end_port)
-                
-                if open_ports:
-                    scanner.analyze_security(open_ports)
-                    report = scanner.generate_report(host, open_ports)
-                    print(f"\nTotal open ports: {report['total_open_ports']}")
-                else:
-                    print("\nNo open ports found")
-                    
-            except ValueError:
-                print("Invalid port number")
-        
-        elif choice == '2':
-            network = input("Enter network (e.g., 192.168.1.0/24): ")
-            active_hosts = scanner.scan_network(network)
-            print(f"\nFound {len(active_hosts)} active hosts")
-        
-        elif choice == '3':
-            print("\nGoodbye!")
-            break
-        
-        else:
-            print("Invalid choice")
-
-if __name__ == "__main__":
-    main()</code></pre>
-            </div>
-        </div>
-    </div>
-
-    <footer style="background: rgba(10, 10, 26, 0.95); border-top: 1px solid rgba(255, 255, 255, 0.1); padding: 2rem 0; text-align: center;">
-        <div class="container">
-            <p style="color: #94a3b8;">© 2024 Gomolemo Chenepe. Built with passion and continuous learning.</p>
-            <div style="display: flex; gap: 2rem; justify-content: center; margin-top: 1rem;">
-                <a href="#home" style="color: #cbd5e1;">Home</a>
-                <a href="#projects" style="color: #cbd5e1;">Projects</a>
-                <a href="#contact" style="color: #cbd5e1;">Contact</a>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Mobile menu toggle
-        function toggleMenu() {
-            const navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('active');
-        }
-
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                document.getElementById('navLinks').classList.remove('active');
-            });
-        });
-
-        // Modal functions
-        function openModal(modalId) {
-            document.getElementById(modalId).style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeModal(modalId) {
-            document.getElementById(modalId).style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-
-        // Close modal when clicking outside
-        window.onclick = function(event) {
-            if (event.target.classList.contains('modal')) {
-                event.target.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            }
-        }
-
-        // Close modal with Escape key
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                document.querySelectorAll('.modal').forEach(modal => {
-                    modal.style.display = 'none';
-                });
-                document.body.style.overflow = 'auto';
-            }
-        });
-
-        // Copy code function
-        function copyCode(button) {
-            const codeBlock = button.closest('.code-viewer').querySelector('code');
-            const textArea = document.createElement('textarea');
-            textArea.value = codeBlock.textContent;
-            document.body.appendChild(textArea);
-            textArea.select();
-            document.execCommand('copy');
-            document.body.removeChild(textArea);
-            
-            button.textContent = 'Copied!';
-            setTimeout(() => {
-                button.textContent = 'Copy Code';
-            }, 2000);
-        }
-
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-
-        // Typing effect
-        const heroText = "Building solutions with Python, Java, MySQL, Cloud & Security";
-        const heroElement = document.getElementById('typing-text');
-        let charIndex = 0;
-
-        function typeWriter() {
-            if (charIndex < heroText.length) {
-                heroElement.textContent += heroText.charAt(charIndex);
-                charIndex++;
-                setTimeout(typeWriter, 50);
-            }
-        }
-
-        window.addEventListener('load', () => {
-            setTimeout(typeWriter, 1000);
-        });
-    </script>
-</body>
-</html>
+        plt
