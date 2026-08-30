@@ -739,11 +739,6 @@
             </div>
         </div>
     </section>
-
-    <!-- ============================================ -->
-    <!-- MODALS - These are what pop up when you click -->
-    <!-- ============================================ -->
-
     <!-- MySQL Modal -->
     <div id="mysqlModal" class="modal">
         <div class="modal-content">
@@ -751,15 +746,36 @@
             <h2>University Database System - MySQL</h2>
             <p>Complete database schema and queries for managing university data.</p>
             
-            <div style="background: rgba(236, 72, 153, 0.1); border-left: 4px solid #ec4899; border-radius: 0.5rem; padding: 1rem 1.5rem; margin: 1rem 0;">
+            <!-- 🔴 LIVE DEMO BUTTON -->
+            <div style="display: flex; gap: 1rem; margin: 1.5rem 0; flex-wrap: wrap;">
+                <a href="https://a5b5b9ea-5217-4a9b-8ebf-2829a821379d-00-2clhem6wdo6dh.reed.replit.dev" target="_blank" class="btn btn-primary" style="background: linear-gradient(135deg, #10b981, #059669); padding: 0.8rem 2rem;">
+                    <i class="fas fa-play-circle"></i> 🔴 Try Live Demo
+                </a>
+                <a href="#" class="btn btn-outline">
+                    <i class="fab fa-github"></i> View Source
+                </a>
+            </div>
+            
+            <!-- 📸 SCREENSHOT -->
+            <div style="background: #1a1a3e; border-radius: 1rem; padding: 1rem; margin-bottom: 1.5rem; border: 1px solid rgba(255,255,255,0.1);">
+                <img src="https://i.postimg.cc/DzsFFqcF/Screenshot-2026-08-30-at-17-22-23.png" alt="University Database Demo" style="max-width: 100%; border-radius: 0.5rem;">
+                <p style="color: #94a3b8; font-size: 0.9rem; text-align: center; margin-top: 0.5rem;">
+                    ⬆️ Live university management system with departments, students, and courses
+                </p>
+            </div>
+            
+            <!-- 💡 WHAT COULD BE IMPROVED -->
+            <div style="background: rgba(236, 72, 153, 0.1); border-left: 4px solid #ec4899; border-radius: 0.5rem; padding: 1rem 1.5rem; margin-bottom: 1.5rem;">
                 <h4 style="color: #ec4899; margin-bottom: 0.5rem;">💡 What Could Be Improved</h4>
                 <ul style="color: #94a3b8; list-style: none; padding: 0; font-size: 0.95rem;">
-                    <li style="margin-bottom: 0.3rem;">✓ <strong>Web interface:</strong> Build a frontend to interact with the database</li>
-                    <li style="margin-bottom: 0.3rem;">✓ <strong>Real data:</strong> Populate with anonymized real university data</li>
-                    <li style="margin-bottom: 0.3rem;">✓ <strong>Analytics:</strong> Add reporting and visualization features</li>
+                    <li style="margin-bottom: 0.3rem;">✓ <strong>Student enrollment:</strong> Add ability to enroll students in courses</li>
+                    <li style="margin-bottom: 0.3rem;">✓ <strong>Grade management:</strong> Track student grades and GPA</li>
+                    <li style="margin-bottom: 0.3rem;">✓ <strong>Advanced analytics:</strong> Show graduation rates and performance metrics</li>
+                    <li style="margin-bottom: 0.3rem;">✓ <strong>User authentication:</strong> Secure admin login for data management</li>
                 </ul>
             </div>
             
+            <!-- 💻 SOURCE CODE -->
             <div class="code-viewer">
                 <div class="code-header">
                     <span>database.sql</span>
@@ -813,7 +829,62 @@ CREATE TABLE courses (
     max_enrollment INT DEFAULT 60,
     FOREIGN KEY (department_id) REFERENCES departments(department_id),
     FOREIGN KEY (prerequisite_course_id) REFERENCES courses(course_id)
-);</code></pre>
+);
+
+-- Tutors Table
+CREATE TABLE tutors (
+    tutor_id INT PRIMARY KEY AUTO_INCREMENT,
+    employee_id VARCHAR(20) UNIQUE NOT NULL,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    specialization VARCHAR(100),
+    department_id INT,
+    designation VARCHAR(50),
+    FOREIGN KEY (department_id) REFERENCES departments(department_id)
+);
+
+-- Course Offerings Table
+CREATE TABLE course_offerings (
+    offering_id INT PRIMARY KEY AUTO_INCREMENT,
+    course_id INT NOT NULL,
+    semester VARCHAR(20) NOT NULL,
+    tutor_id INT,
+    section_number VARCHAR(5) DEFAULT '01',
+    schedule_day VARCHAR(20),
+    schedule_time TIME,
+    room_number VARCHAR(20),
+    current_enrollment INT DEFAULT 0,
+    FOREIGN KEY (course_id) REFERENCES courses(course_id),
+    FOREIGN KEY (tutor_id) REFERENCES tutors(tutor_id)
+);
+
+-- Enrollments Table
+CREATE TABLE enrollments (
+    enrollment_id INT PRIMARY KEY AUTO_INCREMENT,
+    student_id INT NOT NULL,
+    offering_id INT NOT NULL,
+    enrollment_date DATE NOT NULL,
+    status ENUM('Enrolled', 'Waitlisted', 'Dropped', 'Completed') DEFAULT 'Enrolled',
+    grade VARCHAR(3),
+    FOREIGN KEY (student_id) REFERENCES students(student_id),
+    FOREIGN KEY (offering_id) REFERENCES course_offerings(offering_id)
+);
+
+-- Sample Query: Get student performance
+SELECT 
+    s.student_id,
+    s.registration_number,
+    CONCAT(s.first_name, ' ', s.last_name) AS full_name,
+    d.department_name,
+    s.cgpa,
+    COUNT(e.enrollment_id) AS courses_taken
+FROM students s
+JOIN departments d ON s.department_id = d.department_id
+LEFT JOIN enrollments e ON s.student_id = e.student_id
+GROUP BY s.student_id
+HAVING s.cgpa >= 3.5
+ORDER BY s.cgpa DESC;</code></pre>
             </div>
         </div>
     </div>
