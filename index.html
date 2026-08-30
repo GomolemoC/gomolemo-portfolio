@@ -28,7 +28,6 @@
             margin: auto;
         }
 
-        /* Navigation */
         nav {
             position: sticky;
             top: 0;
@@ -78,7 +77,6 @@
             font-size: 1.5rem;
         }
 
-        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -219,7 +217,6 @@
             color: #c084fc;
         }
 
-        /* Sections */
         section {
             padding: 5rem 0;
         }
@@ -247,7 +244,6 @@
             padding: 3rem;
         }
 
-        /* Skills */
         .skills-row {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -282,7 +278,6 @@
             font-size: 0.8rem;
         }
 
-        /* Projects */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -332,7 +327,6 @@
             font-size: 0.8rem;
         }
 
-        /* Code Viewer */
         .code-viewer {
             background: #1a1a3e;
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -374,7 +368,6 @@
             background: #6d28d9;
         }
 
-        /* Modal */
         .modal {
             display: none;
             position: fixed;
@@ -410,7 +403,6 @@
             color: #c084fc;
         }
 
-        /* Cloud & Security Section */
         .cloud-security-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -431,7 +423,6 @@
             margin-bottom: 1rem;
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -520,7 +511,7 @@
         </div>
     </section>
 
-    <!-- About Section - UPDATED -->
+    <!-- About Section -->
     <section id="about">
         <div class="container">
             <h2 class="section-title"><span>✦</span> About Me</h2>
@@ -539,7 +530,7 @@
         </div>
     </section>
 
-    <!-- Skills Section - UPDATED with HTML & CSS -->
+    <!-- Skills Section -->
     <section id="skills">
         <div class="container">
             <h2 class="section-title"><span>✦</span> Technical Skills</h2>
@@ -603,7 +594,6 @@
             <p class="section-subtitle">Click on any project to view the source code and live demo</p>
             
             <div class="projects-grid">
-                <!-- MySQL Project -->
                 <div class="project-card" onclick="openModal('mysqlModal')">
                     <div class="project-image">
                         <i class="fas fa-database"></i>
@@ -618,7 +608,6 @@
                     </div>
                 </div>
 
-                <!-- Python Project -->
                 <div class="project-card" onclick="openModal('pythonModal')">
                     <div class="project-image">
                         <i class="fab fa-python"></i>
@@ -634,7 +623,6 @@
                     </div>
                 </div>
 
-                <!-- Java Project -->
                 <div class="project-card" onclick="openModal('javaModal')">
                     <div class="project-image">
                         <i class="fab fa-java"></i>
@@ -649,7 +637,6 @@
                     </div>
                 </div>
 
-                <!-- Cloud Project -->
                 <div class="project-card" onclick="openModal('cloudModal')">
                     <div class="project-image">
                         <i class="fas fa-cloud"></i>
@@ -657,14 +644,13 @@
                     <div class="project-content">
                         <div class="project-tags">
                             <span>AWS</span>
-                            <span>Cloud</span>
+                            <span>Learning</span>
                         </div>
-                        <h3>Cloud Architecture Design</h3>
-                        <p>AWS cloud architecture for hosting a scalable web application.</p>
+                        <h3>Learning Cloud Architecture</h3>
+                        <p>Exploring AWS fundamentals and cloud deployment concepts through hands-on practice.</p>
                     </div>
                 </div>
 
-                <!-- Cybersecurity Project -->
                 <div class="project-card" onclick="openModal('securityModal')">
                     <div class="project-image">
                         <i class="fas fa-shield-alt"></i>
@@ -685,23 +671,55 @@
     <!-- Cloud & Security Section -->
     <section id="cloud-security">
         <div class="container">
-            <h2 class="section-title"><span>✦</span> Cloud & Security Focus</h2>
+            <h2 class="section-title"><span>✦</span> Cloud & Security</h2>
+            <p class="section-subtitle" style="color: #94a3b8; font-size: 1rem;">
+                Currently learning the fundamentals. Here's what I'm working on.
+            </p>
             <div class="cloud-security-grid">
                 <div class="cloud-card">
                     <i class="fas fa-cloud"></i>
-                    <h3>Cloud Computing</h3>
-                    <p>AWS, Azure, and GCP fundamentals. Understanding of cloud architecture, deployment models, and services.</p>
+                    <h3>☁️ Cloud Fundamentals</h3>
+                    <p>Learning AWS and cloud concepts. Currently exploring:</p>
+                    <ul style="text-align: left; margin-top: 1rem; color: #94a3b8; list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.3rem;">✓ Cloud deployment models</li>
+                        <li style="margin-bottom: 0.3rem;">✓ AWS core services (EC2, S3)</li>
+                        <li style="margin-bottom: 0.3rem;">✓ Cloud architecture basics</li>
+                    </ul>
+                    <div style="margin-top: 1rem; padding: 0.3rem 0.8rem; border-radius: 999px; background: rgba(168, 85, 247, 0.2); color: #c084fc; font-size: 0.8rem; display: inline-block;">
+                        Currently learning
+                    </div>
                 </div>
                 <div class="cloud-card">
                     <i class="fas fa-shield-alt"></i>
-                    <h3>Cybersecurity</h3>
-                    <p>Network security, threat detection, encryption, and security best practices.</p>
+                    <h3>🔐 Cybersecurity Basics</h3>
+                    <p>Understanding security principles and best practices:</p>
+                    <ul style="text-align: left; margin-top: 1rem; color: #94a3b8; list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.3rem;">✓ Network security fundamentals</li>
+                        <li style="margin-bottom: 0.3rem;">✓ Threat detection concepts</li>
+                        <li style="margin-bottom: 0.3rem;">✓ Security hygiene & best practices</li>
+                    </ul>
+                    <div style="margin-top: 1rem; padding: 0.3rem 0.8rem; border-radius: 999px; background: rgba(168, 85, 247, 0.2); color: #c084fc; font-size: 0.8rem; display: inline-block;">
+                        Currently learning
+                    </div>
                 </div>
                 <div class="cloud-card">
                     <i class="fas fa-lock"></i>
-                    <h3>Security Tools</h3>
-                    <p>Experience with security tools and concepts including firewalls, VPNs, and encryption.</p>
+                    <h3>🛡️ Security Tools</h3>
+                    <p>Learning about tools that keep systems safe:</p>
+                    <ul style="text-align: left; margin-top: 1rem; color: #94a3b8; list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.3rem;">✓ Firewalls & VPNs</li>
+                        <li style="margin-bottom: 0.3rem;">✓ Encryption basics</li>
+                        <li style="margin-bottom: 0.3rem;">✓ Password security (built a Java checker!)</li>
+                    </ul>
+                    <div style="margin-top: 1rem; padding: 0.3rem 0.8rem; border-radius: 999px; background: rgba(168, 85, 247, 0.2); color: #c084fc; font-size: 0.8rem; display: inline-block;">
+                        Currently learning
+                    </div>
                 </div>
+            </div>
+            <div style="text-align: center; margin-top: 2.5rem; padding: 1.5rem; background: rgba(26, 26, 62, 0.3); border-radius: 1rem; border: 1px solid rgba(255,255,255,0.05);">
+                <p style="color: #94a3b8; font-style: italic;">
+                    🌱 "I'm actively building my cloud and security skills through hands-on projects and continuous learning."
+                </p>
             </div>
         </div>
     </section>
@@ -722,13 +740,25 @@
         </div>
     </section>
 
-    <!-- Modals with Complete Code -->
+    <!-- ============================================ -->
+    <!-- MODALS - These are what pop up when you click -->
+    <!-- ============================================ -->
+
     <!-- MySQL Modal -->
     <div id="mysqlModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('mysqlModal')">&times;</span>
             <h2>University Database System - MySQL</h2>
-            <p>Complete database schema and queries</p>
+            <p>Complete database schema and queries for managing university data.</p>
+            
+            <div style="background: rgba(236, 72, 153, 0.1); border-left: 4px solid #ec4899; border-radius: 0.5rem; padding: 1rem 1.5rem; margin: 1rem 0;">
+                <h4 style="color: #ec4899; margin-bottom: 0.5rem;">💡 What Could Be Improved</h4>
+                <ul style="color: #94a3b8; list-style: none; padding: 0; font-size: 0.95rem;">
+                    <li style="margin-bottom: 0.3rem;">✓ <strong>Web interface:</strong> Build a frontend to interact with the database</li>
+                    <li style="margin-bottom: 0.3rem;">✓ <strong>Real data:</strong> Populate with anonymized real university data</li>
+                    <li style="margin-bottom: 0.3rem;">✓ <strong>Analytics:</strong> Add reporting and visualization features</li>
+                </ul>
+            </div>
             
             <div class="code-viewer">
                 <div class="code-header">
@@ -783,102 +813,18 @@ CREATE TABLE courses (
     max_enrollment INT DEFAULT 60,
     FOREIGN KEY (department_id) REFERENCES departments(department_id),
     FOREIGN KEY (prerequisite_course_id) REFERENCES courses(course_id)
-);
-
--- Tutors Table
-CREATE TABLE tutors (
-    tutor_id INT PRIMARY KEY AUTO_INCREMENT,
-    employee_id VARCHAR(20) UNIQUE NOT NULL,
-    first_name VARCHAR(50) NOT NULL,
-    last_name VARCHAR(50) NOT NULL,
-    email VARCHAR(100) UNIQUE NOT NULL,
-    specialization VARCHAR(100),
-    department_id INT,
-    designation VARCHAR(50),
-    FOREIGN KEY (department_id) REFERENCES departments(department_id)
-);
-
--- Course Offerings Table
-CREATE TABLE course_offerings (
-    offering_id INT PRIMARY KEY AUTO_INCREMENT,
-    course_id INT NOT NULL,
-    semester VARCHAR(20) NOT NULL,
-    tutor_id INT,
-    section_number VARCHAR(5) DEFAULT '01',
-    schedule_day VARCHAR(20),
-    schedule_time TIME,
-    room_number VARCHAR(20),
-    current_enrollment INT DEFAULT 0,
-    FOREIGN KEY (course_id) REFERENCES courses(course_id),
-    FOREIGN KEY (tutor_id) REFERENCES tutors(tutor_id)
-);
-
--- Enrollments Table
-CREATE TABLE enrollments (
-    enrollment_id INT PRIMARY KEY AUTO_INCREMENT,
-    student_id INT NOT NULL,
-    offering_id INT NOT NULL,
-    enrollment_date DATE NOT NULL,
-    status ENUM('Enrolled', 'Waitlisted', 'Dropped', 'Completed') DEFAULT 'Enrolled',
-    grade VARCHAR(3),
-    FOREIGN KEY (student_id) REFERENCES students(student_id),
-    FOREIGN KEY (offering_id) REFERENCES course_offerings(offering_id)
-);
-
--- Sample Queries
--- Get student performance
-SELECT 
-    s.student_id,
-    s.registration_number,
-    CONCAT(s.first_name, ' ', s.last_name) AS full_name,
-    d.department_name,
-    s.cgpa,
-    COUNT(e.enrollment_id) AS courses_taken
-FROM students s
-JOIN departments d ON s.department_id = d.department_id
-LEFT JOIN enrollments e ON s.student_id = e.student_id
-GROUP BY s.student_id
-HAVING s.cgpa >= 3.5
-ORDER BY s.cgpa DESC;
-
--- Stored Procedure for enrollment
-DELIMITER //
-CREATE PROCEDURE enroll_student(
-    IN p_student_id INT,
-    IN p_offering_id INT,
-    OUT p_status VARCHAR(50)
-)
-BEGIN
-    DECLARE v_current_enrollment INT;
-    DECLARE v_max_enrollment INT;
-    
-    SELECT co.current_enrollment, c.max_enrollment 
-    INTO v_current_enrollment, v_max_enrollment
-    FROM course_offerings co
-    JOIN courses c ON co.course_id = c.course_id
-    WHERE co.offering_id = p_offering_id;
-    
-    IF v_current_enrollment >= v_max_enrollment THEN
-        SET p_status = 'Course is full';
-    ELSE
-        INSERT INTO enrollments (student_id, offering_id, enrollment_date)
-        VALUES (p_student_id, p_offering_id, CURDATE());
-        SET p_status = 'Successfully enrolled';
-    END IF;
-END //
-DELIMITER ;</code></pre>
+);</code></pre>
             </div>
         </div>
     </div>
 
-    <!-- Python Modal - UPDATED with Live Demo, Screenshot & Improvements -->
+    <!-- Python Modal -->
     <div id="pythonModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('pythonModal')">&times;</span>
             <h2>Healthcare Data Analyzer - Python</h2>
             <p>Interactive web app for analyzing patient health data</p>
             
-            <!-- 🔴 LIVE DEMO BUTTONS -->
             <div style="display: flex; gap: 1rem; margin: 1.5rem 0; flex-wrap: wrap;">
                 <a href="https://7c3ff740-f8c4-4b30-ae43-766fd98101e0-00-1g70k1fdu4pxc.reed.replit.dev" target="_blank" class="btn btn-primary" style="background: linear-gradient(135deg, #10b981, #059669); padding: 0.8rem 2rem;">
                     <i class="fas fa-play-circle"></i> 🔴 Try Live Demo
@@ -888,7 +834,6 @@ DELIMITER ;</code></pre>
                 </a>
             </div>
             
-            <!-- 📸 SCREENSHOT -->
             <div style="background: #1a1a3e; border-radius: 1rem; padding: 1rem; margin-bottom: 1.5rem; border: 1px solid rgba(255,255,255,0.1);">
                 <img src="https://i.postimg.cc/XqZSX4kw/Screenshot-2026-08-30-at-15-33-32.png" alt="Healthcare Analyzer Dashboard" style="max-width: 100%; border-radius: 0.5rem;">
                 <p style="color: #94a3b8; font-size: 0.9rem; text-align: center; margin-top: 0.5rem;">
@@ -896,19 +841,15 @@ DELIMITER ;</code></pre>
                 </p>
             </div>
             
-            <!-- 💡 WHAT COULD BE IMPROVED -->
             <div style="background: rgba(236, 72, 153, 0.1); border-left: 4px solid #ec4899; border-radius: 0.5rem; padding: 1rem 1.5rem; margin-bottom: 1.5rem;">
                 <h4 style="color: #ec4899; margin-bottom: 0.5rem;">💡 What Could Be Improved</h4>
                 <ul style="color: #94a3b8; list-style: none; padding: 0; font-size: 0.95rem;">
                     <li style="margin-bottom: 0.3rem;">✓ <strong>Real-time data:</strong> Connect to a live API or database instead of sample data</li>
                     <li style="margin-bottom: 0.3rem;">✓ <strong>ML integration:</strong> Add predictive models for patient risk forecasting</li>
                     <li style="margin-bottom: 0.3rem;">✓ <strong>Export reports:</strong> Generate PDF reports for individual patients</li>
-                    <li style="margin-bottom: 0.3rem;">✓ <strong>User authentication:</strong> Secure access for healthcare professionals</li>
-                    <li style="margin-bottom: 0.3rem;">✓ <strong>Mobile responsive:</strong> Optimize for tablets and mobile devices</li>
                 </ul>
             </div>
             
-            <!-- 💻 SOURCE CODE -->
             <div class="code-viewer">
                 <div class="code-header">
                     <span>healthcare_analyzer.py</span>
@@ -917,15 +858,12 @@ DELIMITER ;</code></pre>
                 <pre><code>import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from datetime import datetime
 
 class HealthcareAnalyzer:
     def __init__(self):
         self.patient_data = None
-        self.analysis_results = {}
     
     def load_data(self, filepath):
-        """Load patient data from CSV file"""
         try:
             self.patient_data = pd.read_csv(filepath)
             print(f"Loaded {len(self.patient_data)} patient records")
@@ -935,41 +873,30 @@ class HealthcareAnalyzer:
             return False
     
     def analyze_patient_risk(self):
-        """Analyze patient risk factors"""
         if self.patient_data is None:
             print("No data loaded")
             return
         
         risk_scores = []
-        
         for _, patient in self.patient_data.iterrows():
             score = 0
-            
-            # Age factor
             if patient.get('age', 0) > 65:
                 score += 3
             elif patient.get('age', 0) > 45:
                 score += 2
-            
-            # Blood pressure
             if patient.get('blood_pressure', 0) > 140:
                 score += 3
             elif patient.get('blood_pressure', 0) > 120:
                 score += 2
-            
-            # Cholesterol
             if patient.get('cholesterol', 0) > 240:
                 score += 3
             elif patient.get('cholesterol', 0) > 200:
                 score += 2
-            
-            # BMI
             bmi = patient.get('bmi', 0)
             if bmi > 30:
                 score += 3
             elif bmi > 25:
                 score += 2
-            
             risk_scores.append(score)
         
         self.patient_data['risk_score'] = risk_scores
@@ -978,33 +905,403 @@ class HealthcareAnalyzer:
             bins=[-1, 3, 6, 10, 20],
             labels=['Low', 'Medium', 'High', 'Critical']
         )
-        
-        return self.patient_data['risk_level'].value_counts()
+        return self.patient_data['risk_level'].value_counts()</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- Java Modal -->
+    <div id="javaModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('javaModal')">&times;</span>
+            <h2>Password Security Checker - Java</h2>
+            <p>Java application for analyzing password strength and security.</p>
+            
+            <div style="background: rgba(236, 72, 153, 0.1); border-left: 4px solid #ec4899; border-radius: 0.5rem; padding: 1rem 1.5rem; margin: 1rem 0;">
+                <h4 style="color: #ec4899; margin-bottom: 0.5rem;">💡 What Could Be Improved</h4>
+                <ul style="color: #94a3b8; list-style: none; padding: 0; font-size: 0.95rem;">
+                    <li style="margin-bottom: 0.3rem;">✓ <strong>Web version:</strong> Turn into a web app using Java Spring</li>
+                    <li style="margin-bottom: 0.3rem;">✓ <strong>Password generator:</strong> Add a secure password generator feature</li>
+                    <li style="margin-bottom: 0.3rem;">✓ <strong>Breach detection:</strong> Check against known data breaches</li>
+                </ul>
+            </div>
+            
+            <div class="code-viewer">
+                <div class="code-header">
+                    <span>PasswordChecker.java</span>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+                <pre><code>import java.util.Scanner;
+import java.util.regex.Pattern;
+
+public class PasswordChecker {
+    private String password;
+    private int score;
+    private StringBuilder feedback;
     
-    def generate_health_trends(self):
-        """Generate health trend analysis"""
-        if self.patient_data is None:
-            print("No data loaded")
-            return
-        
-        trends = {
-            'average_age': self.patient_data['age'].mean(),
-            'average_bmi': self.patient_data['bmi'].mean(),
-            'high_blood_pressure_pct': (self.patient_data['blood_pressure'] > 140).mean() * 100,
-            'high_cholesterol_pct': (self.patient_data['cholesterol'] > 240).mean() * 100,
-            'obesity_pct': (self.patient_data['bmi'] > 30).mean() * 100
+    public PasswordChecker(String password) {
+        this.password = password;
+        this.score = 0;
+        this.feedback = new StringBuilder();
+    }
+    
+    public void analyzePassword() {
+        if (password.length() >= 12) {
+            score += 3;
+            feedback.append("✓ Excellent length (12+ characters)\n");
+        } else if (password.length() >= 8) {
+            score += 2;
+            feedback.append("✓ Good length (8-11 characters)\n");
+        } else if (password.length() >= 6) {
+            score += 1;
+            feedback.append("⚠ Fair length (6-7 characters)\n");
+        } else {
+            feedback.append("✗ Too short (less than 6 characters)\n");
         }
         
-        return trends
+        if (Pattern.compile("[A-Z]").matcher(password).find()) {
+            score += 2;
+            feedback.append("✓ Contains uppercase letters\n");
+        } else {
+            feedback.append("✗ No uppercase letters\n");
+        }
+        
+        if (Pattern.compile("[a-z]").matcher(password).find()) {
+            score += 2;
+            feedback.append("✓ Contains lowercase letters\n");
+        } else {
+            feedback.append("✗ No lowercase letters\n");
+        }
+        
+        if (Pattern.compile("[0-9]").matcher(password).find()) {
+            score += 2;
+            feedback.append("✓ Contains numbers\n");
+        } else {
+            feedback.append("✗ No numbers\n");
+        }
+        
+        if (Pattern.compile("[^a-zA-Z0-9]").matcher(password).find()) {
+            score += 3;
+            feedback.append("✓ Contains special characters\n");
+        } else {
+            feedback.append("⚠ No special characters\n");
+        }
+        
+        score = Math.max(0, Math.min(12, score));
+    }
     
-    def create_visualizations(self):
-        """Create data visualizations"""
-        if self.patient_data is None:
-            print("No data loaded")
-            return
+    public String getStrengthLevel() {
+        if (score >= 10) return "STRONG";
+        else if (score >= 7) return "GOOD";
+        else if (score >= 4) return "FAIR";
+        else return "WEAK";
+    }
+    
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter password to check: ");
+        String password = scanner.nextLine();
+        PasswordChecker checker = new PasswordChecker(password);
+        checker.analyzePassword();
+        System.out.println("Strength: " + checker.getStrengthLevel());
+        scanner.close();
+    }
+}</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cloud Modal -->
+    <div id="cloudModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('cloudModal')">&times;</span>
+            <h2>Learning Cloud Architecture</h2>
+            <p>Exploring AWS fundamentals and cloud deployment concepts.</p>
+            
+            <div style="background: rgba(236, 72, 153, 0.1); border-left: 4px solid #ec4899; border-radius: 0.5rem; padding: 1rem 1.5rem; margin: 1rem 0;">
+                <h4 style="color: #ec4899; margin-bottom: 0.5rem;">💡 What I'm Learning</h4>
+                <ul style="color: #94a3b8; list-style: none; padding: 0; font-size: 0.95rem;">
+                    <li style="margin-bottom: 0.3rem;">✓ AWS EC2 and S3 fundamentals</li>
+                    <li style="margin-bottom: 0.3rem;">✓ Cloud deployment models</li>
+                    <li style="margin-bottom: 0.3rem;">✓ Infrastructure as Code (CloudFormation)</li>
+                    <li style="margin-bottom: 0.3rem;">✓ Auto-scaling and load balancing</li>
+                </ul>
+            </div>
+            
+            <div class="code-viewer">
+                <div class="code-header">
+                    <span>cloud-architecture.yaml</span>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+                <pre><code># AWS CloudFormation Template - Learning Project
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'Learning AWS CloudFormation'
+
+Resources:
+  MyVPC:
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: 10.0.0.0/16
+      EnableDnsHostnames: true
+
+  WebSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Allow HTTP
+      VpcId: !Ref MyVPC
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: 0.0.0.0/0
+
+  MyInstance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.micro
+      ImageId: ami-0c55b159cbfafe1f0
+      SecurityGroups:
+        - !Ref WebSecurityGroup
+      UserData:
+        Fn::Base64: |
+          #!/bin/bash
+          yum update -y
+          yum install -y httpd
+          systemctl start httpd
+          echo "<h1>Learning AWS Cloud</h1>" > /var/www/html/index.html
+
+Outputs:
+  InstanceIP:
+    Description: 'Public IP of EC2 instance'
+    Value: !GetAtt MyInstance.PublicIp</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- Security Modal -->
+    <div id="securityModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('securityModal')">&times;</span>
+            <h2>Network Security Scanner - Python</h2>
+            <p>Python tool for network scanning and security analysis.</p>
+            
+            <div style="background: rgba(236, 72, 153, 0.1); border-left: 4px solid #ec4899; border-radius: 0.5rem; padding: 1rem 1.5rem; margin: 1rem 0;">
+                <h4 style="color: #ec4899; margin-bottom: 0.5rem;">💡 What Could Be Improved</h4>
+                <ul style="color: #94a3b8; list-style: none; padding: 0; font-size: 0.95rem;">
+                    <li style="margin-bottom: 0.3rem;">✓ <strong>Web interface:</strong> Turn into a web app for easier use</li>
+                    <li style="margin-bottom: 0.3rem;">✓ <strong>Vulnerability DB:</strong> Integrate with known vulnerability databases</li>
+                    <li style="margin-bottom: 0.3rem;">✓ <strong>Automated reporting:</strong> Generate professional security reports</li>
+                </ul>
+            </div>
+            
+            <div class="code-viewer">
+                <div class="code-header">
+                    <span>security_scanner.py</span>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                </div>
+                <pre><code>import socket
+import subprocess
+
+class NetworkSecurityScanner:
+    def scan_port(self, host, port):
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        sock.settimeout(1)
+        try:
+            result = sock.connect_ex((host, port))
+            return result == 0
+        except socket.error:
+            return False
+        finally:
+            sock.close()
+    
+    def scan_ports(self, host, start_port=1, end_port=1024):
+        print(f"Scanning {host} (ports {start_port}-{end_port})")
+        open_ports = []
+        for port in range(start_port, end_port + 1):
+            if self.scan_port(host, port):
+                print(f"Port {port}: OPEN")
+                open_ports.append(port)
+        return open_ports
+
+def main():
+    scanner = NetworkSecurityScanner()
+    host = input("Enter host to scan: ")
+    open_ports = scanner.scan_ports(host)
+    print(f"\nOpen ports found: {open_ports}")
+
+if __name__ == "__main__":
+    main()</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer style="background: rgba(10, 10, 26, 0.95); border-top: 1px solid rgba(255, 255, 255, 0.1); padding: 2rem 0; text-align: center;">
+        <div class="container">
+            <p style="color: #94a3b8;">© 2024 Gomolemo Chenepe. Built with passion and continuous learning.</p>
+            <div style="display: flex; gap: 2rem; justify-content: center; margin-top: 1rem;">
+                <a href="#home" style="color: #cbd5e1; text-decoration: none;">Home</a>
+                <a href="#projects" style="color: #cbd5e1; text-decoration: none;">Projects</a>
+                <a href="#contact" style="color: #cbd5e1; text-decoration: none;">Contact</a>
+            </div>
+        </div>
+    </footer>
+<script>
+    // ============================================
+    // 1. MOBILE MENU TOGGLE
+    // ============================================
+    function toggleMenu() {
+        const navLinks = document.getElementById('navLinks');
+        navLinks.classList.toggle('active');
+    }
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.getElementById('navLinks').classList.remove('active');
+        });
+    });
+
+    // ============================================
+    // 2. MODAL FUNCTIONS
+    // ============================================
+    function openModal(modalId) {
+        document.getElementById(modalId).style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(modalId) {
+        document.getElementById(modalId).style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
+    window.onclick = function(event) {
+        if (event.target.classList.contains('modal')) {
+            event.target.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    }
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            document.querySelectorAll('.modal').forEach(modal => {
+                modal.style.display = 'none';
+            });
+            document.body.style.overflow = 'auto';
+        }
+    });
+
+    // ============================================
+    // 3. COPY CODE FUNCTION
+    // ============================================
+    function copyCode(button) {
+        const codeBlock = button.closest('.code-viewer').querySelector('code');
+        const textArea = document.createElement('textarea');
+        textArea.value = codeBlock.textContent;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        button.textContent = 'Copied!';
+        setTimeout(() => {
+            button.textContent = 'Copy Code';
+        }, 2000);
+    }
+
+    // ============================================
+    // 4. SMOOTH SCROLL (with offset for sticky nav)
+    // ============================================
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                const navHeight = document.querySelector('nav').offsetHeight;
+                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // ============================================
+    // 5. TYPING ANIMATION (with cursor blink)
+    // ============================================
+    const heroTexts = [
+        "Building solutions with HTML, CSS, Python, Java & MySQL",
+        "Full-stack developer in the making 🚀",
+        "Data-driven problem solver 📊",
+        "Cloud & security enthusiast ☁️🔐"
+    ];
+    
+    const heroElement = document.getElementById('typing-text');
+    let textIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let currentText = '';
+
+    function typeWriter() {
+        const fullText = heroTexts[textIndex];
         
-        fig, axes = plt.subplots(2, 2, figsize=(12, 10))
-        
-        # Age distribution
-        axes[0, 0].hist(self.patient_data['age'], bins=20, color='skyblue')
-        axes[
+        if (isDeleting) {
+            // Deleting
+            currentText = fullText.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            // Typing
+            currentText = fullText.substring(0, charIndex + 1);
+            charIndex++;
+        }
+
+        heroElement.textContent = currentText;
+
+        // Add cursor blink effect
+        if (charIndex === fullText.length && !isDeleting) {
+            // Pause at the end
+            setTimeout(() => {
+                isDeleting = true;
+                setTimeout(typeWriter, 300);
+            }, 2500);
+            return;
+        }
+
+        if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            textIndex = (textIndex + 1) % heroTexts.length;
+            setTimeout(typeWriter, 500);
+            return;
+        }
+
+        const speed = isDeleting ? 30 : 60;
+        setTimeout(typeWriter, speed);
+    }
+
+    // ============================================
+    // 6. NAVBAR HIDE/SHOW ON SCROLL (optional)
+    // ============================================
+    let lastScrollTop = 0;
+    const nav = document.querySelector('nav');
+
+    window.addEventListener('scroll', function() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+            // Scrolling down - hide nav
+            nav.style.transform = 'translateY(-100%)';
+            nav.style.transition = 'transform 0.3s ease';
+        } else {
+            // Scrolling up - show nav
+            nav.style.transform = 'translateY(0)';
+        }
+        lastScrollTop = scrollTop;
+    });
+
+    // ============================================
+    // 7. START THE SHOW!
+    // ============================================
+    window.addEventListener('load', () => {
+        setTimeout(typeWriter, 1000);
+    });
+</script>
+</body>
+</html>
