@@ -497,12 +497,12 @@
     <section id="home" class="hero">
         <div class="container hero-content">
             <div>
-                <div class="pill">Aspiring Tech Professional</div>
+                <div class="pill">Aspiring Full-Stack Developer</div>
                 <h1>Hi, I'm <br><span class="gradient-text">Gomolemo Chenepe</span></h1>
                 <h2 id="typing-text"></h2>
                 <p>
-                    BSc Biological Sciences student transitioning into tech. Proficient in Python, Java, and MySQL.
-                    Passionate about cloud computing, cybersecurity, and data-driven solutions.
+                    BSc Biological Sciences student transitioning into tech. Proficient in HTML, CSS, Python, Java, and MySQL.
+                    Passionate about building web solutions, cloud computing, and data-driven applications.
                 </p>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-primary">View Projects →</a>
@@ -520,7 +520,7 @@
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About Section - UPDATED -->
     <section id="about">
         <div class="container">
             <h2 class="section-title"><span>✦</span> About Me</h2>
@@ -531,14 +531,15 @@
                 </p>
                 <br>
                 <p>
-                    Currently building my skills in Python, Java, and MySQL while exploring cloud computing and cybersecurity.
+                    I build full-stack web applications using <strong>HTML, CSS, Python, and MySQL</strong> – including this very portfolio!
+                    I'm also exploring cloud computing and cybersecurity to understand how applications stay secure and scalable.
                     I believe in learning by doing, which is why I've created real, working projects that demonstrate my abilities.
                 </p>
             </div>
         </div>
     </section>
 
-        <!-- Skills Section -->
+    <!-- Skills Section - UPDATED with HTML & CSS -->
     <section id="skills">
         <div class="container">
             <h2 class="section-title"><span>✦</span> Technical Skills</h2>
@@ -599,7 +600,7 @@
     <section id="projects">
         <div class="container">
             <h2 class="section-title"><span>✦</span> My Projects</h2>
-            <p class="section-subtitle">Click on any project to view the complete source code</p>
+            <p class="section-subtitle">Click on any project to view the source code and live demo</p>
             
             <div class="projects-grid">
                 <!-- MySQL Project -->
@@ -1006,26 +1007,4 @@ class HealthcareAnalyzer:
         
         # Age distribution
         axes[0, 0].hist(self.patient_data['age'], bins=20, color='skyblue')
-        axes[0, 0].set_title('Age Distribution')
-        
-        # BMI distribution
-        axes[0, 1].hist(self.patient_data['bmi'], bins=20, color='lightgreen')
-        axes[0, 1].set_title('BMI Distribution')
-        
-        # Risk levels
-        risk_counts = self.patient_data['risk_level'].value_counts()
-        axes[1, 0].bar(risk_counts.index, risk_counts.values, color='salmon')
-        axes[1, 0].set_title('Risk Level Distribution')
-        
-        # Blood pressure vs Age
-        axes[1, 1].scatter(
-            self.patient_data['age'],
-            self.patient_data['blood_pressure'],
-            alpha=0.5,
-            color='purple'
-        )
-        axes[1, 1].set_title('Blood Pressure vs Age')
-        
-        plt.tight_layout()
-        plt.savefig('healthcare_analysis.png')
-        plt
+        axes[
