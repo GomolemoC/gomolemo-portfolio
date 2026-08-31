@@ -1083,23 +1083,43 @@ public class PasswordChecker {
         </div>
     </div>
 
-    <!-- Cloud Modal -->
+      <!-- Cloud Modal -->
     <div id="cloudModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('cloudModal')">&times;</span>
-            <h2>Learning Cloud Architecture</h2>
-            <p>Exploring AWS fundamentals and cloud deployment concepts.</p>
+            <h2>☁️ AWS Cloud Architecture</h2>
+            <p>Scalable web application infrastructure on AWS, deployed with Infrastructure as Code.</p>
             
-            <div style="background: rgba(236, 72, 153, 0.1); border-left: 4px solid #ec4899; border-radius: 0.5rem; padding: 1rem 1.5rem; margin: 1rem 0;">
-                <h4 style="color: #ec4899; margin-bottom: 0.5rem;">💡 What I'm Learning</h4>
+            <!-- 🔴 LIVE DEMO BUTTON -->
+            <div style="display: flex; gap: 1rem; margin: 1.5rem 0; flex-wrap: wrap;">
+                <a href="https://cool-pika-60ca40.netlify.app" target="_blank" class="btn btn-primary" style="background: linear-gradient(135deg, #10b981, #059669); padding: 0.8rem 2rem; display: inline-flex; align-items: center; gap: 0.5rem;">
+                    <i class="fas fa-cloud"></i> ☁️ View Live Cloud Demo
+                </a>
+                <a href="#" class="btn btn-outline">
+                    <i class="fab fa-github"></i> View Source
+                </a>
+            </div>
+            
+            <!-- 📸 SCREENSHOT -->
+            <div style="background: #1a1a3e; border-radius: 1rem; padding: 1rem; margin-bottom: 1.5rem; border: 1px solid rgba(255,255,255,0.1);">
+                <img src="https://i.postimg.cc/Yq9p0HcY/cloud-demo.png" alt="AWS Cloud Architecture Demo" style="max-width: 100%; border-radius: 0.5rem;" onerror="this.src='https://via.placeholder.com/800x400/1a1a3e/10b981?text=AWS+Cloud+Architecture+Live+Demo'">
+                <p style="color: #94a3b8; font-size: 0.9rem; text-align: center; margin-top: 0.5rem;">
+                    ⬆️ Interactive AWS architecture demonstration with EC2 simulation
+                </p>
+            </div>
+            
+            <!-- 💡 WHAT I LEARNED -->
+            <div style="background: rgba(236, 72, 153, 0.1); border-left: 4px solid #ec4899; border-radius: 0.5rem; padding: 1rem 1.5rem; margin-bottom: 1.5rem;">
+                <h4 style="color: #ec4899; margin-bottom: 0.5rem;">📚 What I Learned</h4>
                 <ul style="color: #94a3b8; list-style: none; padding: 0; font-size: 0.95rem;">
-                    <li style="margin-bottom: 0.3rem;">✓ AWS EC2 and S3 fundamentals</li>
-                    <li style="margin-bottom: 0.3rem;">✓ Cloud deployment models</li>
-                    <li style="margin-bottom: 0.3rem;">✓ Infrastructure as Code (CloudFormation)</li>
-                    <li style="margin-bottom: 0.3rem;">✓ Auto-scaling and load balancing</li>
+                    <li style="margin-bottom: 0.3rem;">✓ AWS core services (VPC, EC2, Security Groups)</li>
+                    <li style="margin-bottom: 0.3rem;">✓ Infrastructure as Code using CloudFormation</li>
+                    <li style="margin-bottom: 0.3rem;">✓ Cloud networking and security best practices</li>
+                    <li style="margin-bottom: 0.3rem;">✓ Deploying static cloud architecture demos</li>
                 </ul>
             </div>
             
+            <!-- 💻 SOURCE CODE -->
             <div class="code-viewer">
                 <div class="code-header">
                     <span>cloud-architecture.yaml</span>
